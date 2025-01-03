@@ -1,22 +1,31 @@
 const handleScrambleText = function () {
-	gsap.registerPlugin(ScrambleTextPlugin);
-	gsap.config({trialWarn: false});
+	if ($(".scramble").length > 0) {
+		gsap.registerPlugin(ScrambleTextPlugin);
+		gsap.config({trialWarn: false});
 
-	const scrambleLists = gsap.utils.toArray('.scramble');
+		$(".scramble").each(function () {
+			let $element = $(this);
+			let timeline = gsap.timeline({paused: true});
 
-	scrambleLists.map(function (scrambleItem) {
-		let tween = gsap.to(scrambleItem, {
-			scrambleText: {chars: "021zrotxinsmopsweknm", text: "{original}", speed: 2, delimiter: ""},
-			duration: 0.8
-		});
+			timeline.to($element.find(".scrambleText")[0], {
+				scrambleText: {
+					chars: "021zrotxinsmopsweknm",
+					text: "{original}",
+					speed: 2,
+					delimiter: ""
+				},
+				duration: 0.8
+			});
 
-		$(scrambleItem).on('mouseenter', function (e) {
-			tween.play();
+			$element.on("mouseenter", function () {
+				timeline.timeScale(1).play();
+			});
+
+			$element.on("mouseleave", function () {
+				timeline.timeScale(1.5).reverse();
+			});
 		});
-		$(scrambleItem).on("mouseleave", function () {
-			tween.reverse();
-		});
-	})
+	}
 }
 
 $(document).ready(function () {
