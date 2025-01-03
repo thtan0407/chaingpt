@@ -1,0 +1,140 @@
+.header {
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+.header .header-container {
+	background: transparent;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin: 0;
+	padding: 1rem 0;
+}
+
+.header .header-container .header-logo {
+	width: 15.5%;
+}
+
+.header .header-container .header-app {
+	width: 15.5%;
+}
+
+.button-theme {
+	padding: .8125rem;
+	font-size: .75rem;
+	position: relative;
+	max-width: 100%;
+	display: inline-block;
+	text-decoration: none;
+	user-select: none;
+}
+
+.button-theme:before,
+.button-theme:after {
+	position: absolute;
+	width: 10px;
+	height: 1px;
+	content: "";
+}
+
+.button-theme .button-theme_decor:before, .button-theme .button-theme_decor:after {
+	pointer-events: none;
+}
+
+.button-theme .button-theme_decor:before, .button-theme .button-theme_decor:after {
+	position: absolute;
+	content: "";
+}
+
+.button-theme .button-theme_decor.button-theme_decor_1:before,
+.button-theme .button-theme_decor.button-theme_decor_1:after {
+	width: calc(100% - 8px);
+	height: 1px;
+}
+
+.button-theme .button-theme_decor.button-theme_decor_2:before,
+.button-theme .button-theme_decor.button-theme_decor_2:after {
+	position: absolute;
+	width: 1px;
+	content: "";
+}
+
+.button-theme.button-theme_primary {
+	pointer-events: auto;
+}
+
+.button-theme.button-theme_primary:before {
+	top: 0;
+	left: -3px;
+	transform: rotate(-45deg);
+	transform-origin: top right;
+	background: linear-gradient(to right, #fb6e53 0%, #fb7454 100%);
+}
+
+.button-theme.button-theme_primary:after {
+	bottom: 0;
+	right: -3px;
+	transform: rotate(-45deg);
+	transform-origin: bottom left;
+	background: linear-gradient(to right, #74e79a 0%, #74e79a 100%);
+}
+
+.button-theme.button-theme_primary .button-theme_decor.button-theme_decor_1:before {
+	top: 0;
+	left: 7px;
+	background: linear-gradient(to right, #fb7454 0%, #bcda68 100%);
+}
+
+.button-theme.button-theme_primary .button-theme_decor.button-theme_decor_1:after {
+	bottom: 0;
+	right: 7px;
+	background: linear-gradient(to right, #6072e2 0%, #74e79a 100%);
+}
+
+.button-theme.button-theme_primary .button-theme_decor.button-theme_decor_2:before {
+	bottom: 0;
+	left: 0;
+	height: 56%;
+	background: linear-gradient(to bottom, #6e52e5 0%, #6072e2 100%);
+}
+
+.button-theme.button-theme_primary .button-theme_decor.button-theme_decor_2:after {
+	top: 0;
+	right: 0;
+	height: calc(100% - 7px);
+	background: linear-gradient(to bottom, #bcda68 0%, #74e79a 100%);
+}
+
+.button-theme.button-theme_primary .button-theme_text {
+	color: var(--text-color);
+	text-transform: uppercase;
+	padding-left: 1.4375rem;
+	font-size: .8125rem;
+	line-height: 1;
+	text-decoration: none;
+	display: block;
+	position: relative;
+}
+
+.button-theme.button-theme_primary .button-theme_text:before,
+.button-theme.button-theme_primary .button-theme_text:after {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	width: 0.25rem;
+	height: 0.25rem;
+	background-color: var(--text-color);
+	border-radius: 50%;
+	content: "";
+}
+
+.button-theme.button-theme_primary .button-theme_text:before {
+	left: 0;
+}
+
+.button-theme.button-theme_primary .button-theme_text:after {
+	left: 0.4375rem;
+}

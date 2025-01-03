@@ -3,22 +3,27 @@
 	--primary-hover: #4cc46e;
 	--primary-light: #c6fcd6;
 	--primary-rgb: 91, 222, 129;
-	--font-theme: "Inter", Arial, Helvetica, sans-serif;
+	--font-theme: "Roboto Mono", Arial, Helvetica, sans-serif;
 	--transition-default: 0.3s all ease-in-out;
-	--size-theme: 14px;
-	--color-text: #cccccc;
-	--color-hover: #1b1e1f;
+	--size-theme: 1rem;
+	--text-color: #efefe5;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	font-size: calc(16px + 6 * ((100vw - 1440px) / 720));
 }
 
 body {
 	position: relative;
 	width: 100%;
-	color: var(--color-text);
+	color: var(--text-color);
 	font-family: var(--font-theme);
 	font-size: var(--size-theme);
 	font-weight: 400;
 	font-style: normal;
-	background-color: #070707;
+	background-color: #0a090f;
 	overflow-x: hidden;
 }
 
@@ -61,7 +66,6 @@ textarea:focus {
 	box-shadow: none !important;
 	-webkit-box-shadow: none !important;
 	outline: none !important;
-	border-color: var(--bs-white) !important;
 }
 
 .transition-default {
