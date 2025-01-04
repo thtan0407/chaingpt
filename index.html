@@ -35,16 +35,16 @@
 <div class="vertical-line vertical-line_center"></div>
 <div class="vertical-line vertical-line_right"></div>
 
-<div class="section-notification">
+<div class="section-notification" id="notificationBlock">
 	<div class="notification-content d-flex align-items-center justify-content-between gap-15px">
 		<a href="" class="d-inline-flex notification-content_link">
 			<span class="notification-content_text limit">
 				News:&nbsp;Nova - The first AI Agent on X Designed for Crypto News
 			</span>
-			<img src="./assets/images/arrow.svg" loading="lazy" class="w-auto mw-100 ms-3" width="12" width="17.5"
+			<img src="./assets/images/arrow.svg" loading="lazy" class="w-auto mw-100 ms-3" height="12" width="17.5"
 			     alt="News:&nbsp;Nova - The first AI Agent on X Designed for Crypto News">
 		</a>
-		<button type="button" class="link-default notification-content_close"></button>
+		<button type="button" class="link-default notification-content_close" id="notificationClose"></button>
 	</div>
 </div>
 
@@ -70,6 +70,106 @@
 						     class="d-block d-lg-none"
 						     alt="Our Ecosystem">
 					</button>
+					<div class="navigation-list">
+						<div class="navigation-item navigation-item_active position-relative">
+							<div class="navigation-item_logo">
+								<img src="./assets/images/menu/logo-chaingpt.svg" width="152" height="26" loading="lazy"
+								     alt="Main Website"
+								     class="navigation-item_logo__image">
+								<img src="./assets/images/selected-indicator.svg" loading="lazy" alt="Main Website"
+								     class="navigation-item_logo__arrow">
+							</div>
+							<div class="navigation-item_title">
+								Main Website
+							</div>
+							<div class="navigation-item_bg"></div>
+							<a href="" class="stretched-link" aria-label="Main Logo"></a>
+						</div>
+						<div class="navigation-item position-relative">
+							<div class="navigation-item_logo">
+								<img src="./assets/images/menu/logo-aihub.svg" width="103" height="26" loading="lazy"
+								     alt="Cryptoo Ai Hub"
+								     class="navigation-item_logo__image">
+								<img src="./assets/images/arrow.svg" loading="lazy" alt="Cryptoo Ai Hub"
+								     class="navigation-item_logo__arrow">
+							</div>
+							<div class="navigation-item_title">
+								Cryptoo Ai Hub
+							</div>
+							<div class="navigation-item_bg"></div>
+							<a href="" class="stretched-link" aria-label="Main Logo"></a>
+						</div>
+						<div class="navigation-item position-relative">
+							<div class="navigation-item_logo">
+								<img src="./assets/images/menu/logo-nftgen.svg" width="77" height="26" loading="lazy"
+								     alt="AI NFT Generator"
+								     class="navigation-item_logo__image">
+								<img src="./assets/images/arrow.svg" loading="lazy" alt="AI NFT Generator"
+								     class="navigation-item_logo__arrow">
+							</div>
+							<div class="navigation-item_title">
+								AI NFT Generator
+							</div>
+							<div class="navigation-item_bg"></div>
+							<a href="" class="stretched-link" aria-label="Main Logo"></a>
+						</div>
+						<div class="navigation-item position-relative">
+							<div class="navigation-item_logo">
+								<img src="./assets/images/menu/logo-pad.svg" width="77" height="26" loading="lazy"
+								     alt="Our Launchpad"
+								     class="navigation-item_logo__image">
+								<img src="./assets/images/arrow.svg" loading="lazy" alt="Our Launchpad"
+								     class="navigation-item_logo__arrow">
+							</div>
+							<div class="navigation-item_title">
+								Our Launchpad
+							</div>
+							<div class="navigation-item_bg"></div>
+							<a href="" class="stretched-link" aria-label="Main Logo"></a>
+						</div>
+						<div class="navigation-item position-relative">
+							<div class="navigation-item_logo">
+								<img src="./assets/images/menu/logo-labs.svg" width="103" height="25" loading="lazy"
+								     alt="Incubation Labs"
+								     class="navigation-item_logo__image">
+								<img src="./assets/images/arrow.svg" loading="lazy" alt="Incubation Labs"
+								     class="navigation-item_logo__arrow">
+							</div>
+							<div class="navigation-item_title">
+								Incubation Labs
+							</div>
+							<div class="navigation-item_bg"></div>
+							<a href="" class="stretched-link" aria-label="Main Logo"></a>
+						</div>
+						<div class="navigation-item position-relative">
+							<div class="navigation-item_logo">
+								<img src="./assets/images/menu/logo-guard.svg" width="103" height="48" loading="lazy"
+								     alt="Security extension"
+								     class="navigation-item_logo__image">
+								<img src="./assets/images/arrow.svg" loading="lazy" alt="Security extension"
+								     class="navigation-item_logo__arrow">
+							</div>
+							<div class="navigation-item_title">
+								Security extension
+							</div>
+							<div class="navigation-item_bg"></div>
+							<a href="" class="stretched-link" aria-label="Main Logo"></a>
+						</div>
+						<div class="navigation-item position-relative">
+							<div class="navigation-item_logo">
+								<img src="./assets/images/menu/logo-tab.svg" width="90" height="32" loading="lazy"
+								     alt="CLICKER GAME"
+								     class="navigation-item_logo__image">
+								<img src="./assets/images/arrow.svg" loading="lazy" alt="CLICKER GAME"
+								     class="navigation-item_logo__arrow">
+							</div>
+							<div class="navigation-item_title">
+								CLICKER GAME
+							</div>
+							<div class="navigation-item_bg"></div>
+							<a href="" class="stretched-link" aria-label="Main Logo"></a>
+						</div>
+					</div>
 				</li>
 				<li>
 					<button type="button" aria-label="Solutions" class="link-default scramble">
@@ -101,15 +201,6 @@
 											     loading="lazy"
 											     alt="AI NFT Generator">
 											AI NFT Generator
-										</a>
-									</li>
-									<li>
-										<a href="" aria-label="AI Generated News">
-											<img src="./assets/images/menu/icon-ainews.webp" class="mw-100" height="122"
-											     width="122"
-											     loading="lazy"
-											     alt="AI Generated News">
-											AI Generated News
 										</a>
 									</li>
 									<li>
@@ -627,6 +718,130 @@
 	</div>
 </header>
 
+<div class="section-hero">
+	<div class="section-container">
+		<div class="section-container_middle">
+			<div class="hero-info">
+				<div class="hero-info_left">
+					<div class="hero-info_slider">
+						<div class="hero-info_quote">
+							<img src="./assets/images/icon-quote.svg" width="20" height="16" loading="lazy" alt="">
+						</div>
+						<div class="hero-info_corner">
+							<div class="hero-info_corner__top">
+								<img src="./assets/images/icon-corner.svg" loading="lazy" width="15" height="15" alt="">
+							</div>
+							<div class="hero-info_corner__bottom">
+								<img src="./assets/images/icon-corner.svg" loading="lazy" width="15" height="15" alt="">
+							</div>
+						</div>
+						<div class="hero-info_slider__inner" id="sliderHero">
+							<div class="swiper h-100">
+								<div class="swiper-wrapper h-100">
+									<div class="swiper-slide">
+										<div class="hero-info_slider__text">
+											Create a smart contract for a token named CGPT on Ethereum.
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="hero-info_slider__text">
+											provide me with a daily crypto market analysis report.
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="hero-info_slider__text">
+											How to deploy a Smart Contract on the Ethereum blockchain?
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="hero-info_slider__text">
+											How do I run a Bitcoin wallet locally?
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="hero-info_slider__text">
+											Summarize the latest Crypto-related news.
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="hero-info_slider__text">
+											Create a smart contract for a token named CGPT on Ethereum.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hero-info_slider__fade"></div>
+					</div>
+				</div>
+				<div class="hero-info_right">
+					<div class="hero-info_feature__slider" id="sliderHeroFeature">
+						<img src="./assets/images/icon-indicator.svg" width="7.5" height="15" alt="MARKET ANALYSIS">
+						<div class="swiper h-100 w-100">
+							<div class="swiper-wrapper h-100">
+								<div class="swiper-slide h-100">
+									<div class="hero-info_feature__slider___item">
+										<div class="hero-info_feature__slider___text">
+											AI Tools
+										</div>
+										<div class="hero-info_feature__slider___score">
+											10
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide h-100">
+									<div class="hero-info_feature__slider___item">
+										<div class="hero-info_feature__slider___text">
+											MAUs
+										</div>
+										<div class="hero-info_feature__slider___score">
+											550k
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide h-100">
+									<div class="hero-info_feature__slider___item">
+										<div class="hero-info_feature__slider___text">
+											TVL
+										</div>
+										<div class="hero-info_feature__slider___score">
+											$30+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="hero-info_feature">
+						<img src="./assets/images/icon-indicator.svg" width="7.5" height="15" alt="DEVELOPMENT">
+						<span>
+							DEVELOPMENT
+						</span>
+					</div>
+					<div class="hero-info_feature">
+						<img src="./assets/images/icon-indicator.svg" width="7.5" height="15" alt="MARKET ANALYSIS">
+						<span>
+							MARKET ANALYSIS
+						</span>
+					</div>
+					<div class="hero-info_feature">
+						<img src="./assets/images/icon-indicator.svg" width="7.5" height="15" alt="AI TRADING">
+						<span>
+							AI TRADING
+						</span>
+					</div>
+					<div class="hero-info_feature hero-info_feature__transparent">
+						<span>
+							AND MUCH MORE
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 <script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/gsap/gsap.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/gsap/ScrambleTextPlugin3.min.js"></script>
@@ -637,3 +852,4 @@
 <script type="text/javascript" src="./assets/js/app.js?ver=1"></script>
 </body>
 </html>
+

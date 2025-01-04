@@ -28,6 +28,61 @@ const handleScrambleText = function () {
 	}
 }
 
+const handleNotification = function () {
+	if ($('#notificationBlock').length > 0 && $('#notificationClose').length > 0) {
+		$('#notificationClose').click(() => {
+			$('#notificationBlock').remove();
+		})
+	}
+}
+
+const handleSwiper = function (elm, obj = {}) {
+	return new Swiper(elm, {
+		loop: true,
+		speed: 1000,
+		autoplay: {
+			delay: 8000,
+			disableOnInteraction: true,
+		},
+		slidesPerView: 1,
+		...obj
+	});
+}
+
+const handleSliderHero = function () {
+	if ($('#sliderHero').length > 0) {
+		const elmSwiper = '#sliderHero';
+		const objSwiper = {
+			speed: 500,
+			autoplay: {
+				delay: 1000,
+				disableOnInteraction: true,
+			},
+			slidesPerView: 2,
+			direction: "vertical",
+			allowTouchMove: false,
+		}
+		handleSwiper(elmSwiper + ' .swiper', objSwiper);
+	}
+
+	if ($('#sliderHeroFeature').length > 0) {
+		const elmSwiper = '#sliderHeroFeature';
+		const objSwiper = {
+			speed: 500,
+			autoplay: {
+				delay: 1000,
+				disableOnInteraction: true,
+			},
+			slidesPerView: 1,
+			direction: "vertical",
+			allowTouchMove: false,
+		}
+		handleSwiper(elmSwiper + ' .swiper', objSwiper);
+	}
+}
+
 $(document).ready(function () {
 	handleScrambleText();
+	handleNotification();
+	handleSliderHero();
 });
