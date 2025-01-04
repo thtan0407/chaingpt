@@ -699,7 +699,7 @@
 	padding-right: 2%;
 }
 
-.section-container_middle {
+.section-container_small {
 	width: 69.03%;
 	margin-left: auto;
 	margin-right: auto;
@@ -889,4 +889,172 @@
 .section-hero .hero-info .hero-info_feature__slider .swiper-slide.swiper-slide-active .hero-info_feature__slider___score {
 	transform: translateY(0);
 	border-bottom: 0;
+}
+
+.section-hero .hero-expand {
+	display: flex;
+	z-index: 9;
+	align-items: flex-end;
+	margin-bottom: 0;
+	position: relative;
+}
+
+.section-hero .hero-expand .hero-expand_left {
+	padding-bottom: 10px;
+}
+
+.section-hero .hero-expand .hero-expand_center {
+	z-index: 9;
+	width: 34.3%;
+	margin-left: auto;
+	padding: 0 26px;
+	position: relative;
+}
+
+.section-hero .hero-expand .hero-expand_text {
+	font-size: 1.125rem;
+	color: var(--text-color);
+}
+
+.section-hero .hero-expand .hero-expand_right {
+	text-align: right;
+	justify-content: flex-end;
+	width: 15.6%;
+	padding-left: 26px;
+	display: flex;
+}
+
+.section-hero .hero-expand .hero-expand_scroll {
+	align-items: center;
+	text-decoration: none;
+	display: flex;
+}
+
+.section-hero .hero-expand .hero-expand_scroll .hero-expand_scroll__text {
+	color: #efefe599;
+	margin-right: 24px;
+	font-size: .75rem;
+}
+
+.section-hero .hero-expand .hero-expand_scroll .hero-expand_scroll__icon {
+	justify-content: center;
+	align-items: center;
+	width: 76px;
+	height: 76px;
+	display: flex;
+	position: relative;
+}
+
+.section-hero .hero-expand .hero-expand_scroll .hero-expand_scroll__icon .hero-expand_scroll_corner___top {
+	opacity: .3;
+	transform-style: preserve-3d;
+	top: -10px;
+	right: 0;
+	transform: rotateX(0) rotateY(180deg) rotate(0);
+	width: 15px;
+	height: 15px;
+	position: absolute;
+}
+
+.section-hero .hero-expand .hero-expand_scroll .hero-expand_scroll__icon .hero-expand_scroll_corner___bottom {
+	opacity: .3;
+	transform-style: preserve-3d;
+	bottom: -10px;
+	left: 0;
+	transform: rotateX(180deg) rotateY(0) rotate(0);
+	width: 15px;
+	height: 15px;
+	position: absolute;
+}
+
+.section-hero .hero-expand .hero-expand_scroll:hover .hero-expand_scroll__icon > img {
+	transform: translate(0, 20%);
+}
+
+.section-hero .hero-expand .hero-sub {
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	font-size: 1.125rem;
+	line-height: 1.33;
+}
+
+.section-hero .hero-expand .hero-heading {
+	flex-direction: column;
+	align-items: flex-start;
+	display: flex;
+	font-size: 4rem;
+	line-height: 1;
+	position: relative;
+	font-weight: 600;
+	margin-bottom: 0.75rem;
+}
+
+.section-hero .hero-expand .hero-heading .hero-heading_line {
+	background-color: #ffffff2e;
+	width: 100vw;
+	height: 1px;
+	position: absolute;
+	bottom: 0;
+	left: 100%;
+}
+
+.section-hero .hero-expand .hero-heading .hero-heading_title {
+	padding: 0.75rem 1.125rem 0.5rem;
+	display: flex;
+	line-height: 1.2;
+}
+
+.section-hero .hero-expand .hero-heading .hero-heading_stroke {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.section-hero .hero-expand .hero-heading .hero-heading_stroke svg {
+	width: 22.3125rem;
+	height: auto;
+}
+
+@media screen and (max-width: 991px) {
+	.section-hero .hero-expand .hero-heading .hero-heading_stroke svg {
+		width: 18rem;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.section-hero .hero-expand .hero-heading .hero-heading_stroke svg {
+		width: 26.3125rem;
+	}
+}
+
+
+.section-hero .hero-expand .hero-heading.hero-heading_bottom {
+	padding: 0 1.125rem;
+	position: relative;
+	margin-bottom: 0;
+}
+
+.section-hero .hero-expand .hero-heading.hero-heading_bottom .hero-heading_title {
+	padding: 0;
+}
+
+.section-hero .hero-expand .hero-heading.hero-heading_bottom .hero-heading_stroke {
+	top: -.3125rem;
+}
+
+.section-hero .hero-expand .hero-heading_bottom .hero-heading_stroke svg {
+	width: 5.7rem;
+	height: auto;
+}
+
+@media screen and (max-width: 991px) {
+	.section-hero .hero-expand .hero-heading.hero-heading_bottom .hero-heading_stroke svg {
+		width: 5rem;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.section-hero .hero-expand .hero-heading.hero-heading_bottom .hero-heading_stroke svg {
+		width: 7.125rem;
+	}
 }

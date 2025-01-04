@@ -55,7 +55,7 @@ const handleSliderHero = function () {
 		const objSwiper = {
 			speed: 500,
 			autoplay: {
-				delay: 1000,
+				delay: 8000,
 				disableOnInteraction: true,
 			},
 			slidesPerView: 2,
@@ -70,7 +70,7 @@ const handleSliderHero = function () {
 		const objSwiper = {
 			speed: 500,
 			autoplay: {
-				delay: 1000,
+				delay: 8000,
 				disableOnInteraction: true,
 			},
 			slidesPerView: 1,
