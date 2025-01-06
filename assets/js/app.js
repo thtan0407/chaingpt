@@ -80,9 +80,25 @@ const handleSliderHero = function () {
 		handleSwiper(elmSwiper + ' .swiper', objSwiper);
 	}
 }
+const handleSliderUnlimited = function () {
+	if ($('#sliderUnlimited').length > 0) {
+		const elmSwiper = '#sliderUnlimited';
+		const objSwiper = {
+			speed: 500,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: true,
+			},
+			slidesPerView: 2.505,
+			allowTouchMove: false,
+		}
+		handleSwiper(elmSwiper + ' .swiper', objSwiper);
+	}
+}
 
 $(document).ready(function () {
 	handleScrambleText();
 	handleNotification();
 	handleSliderHero();
+	handleSliderUnlimited();
 });
