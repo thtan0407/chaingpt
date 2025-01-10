@@ -96,9 +96,28 @@ const handleSliderUnlimited = function () {
 	}
 }
 
+const handleSliderArticles = function () {
+	if ($('#sliderArticles').length > 0) {
+		const elmSwiper = '#sliderArticles';
+		const objSwiper = {
+			loop: false,
+			speed: 500,
+			autoplay: false,
+			slidesPerView: 2,
+			allowTouchMove: false,
+			navigation: {
+				nextEl: elmSwiper + " .sliderArticlesNext",
+				prevEl: elmSwiper + " .sliderArticlesPrev",
+			},
+		}
+		handleSwiper(elmSwiper + ' .swiper', objSwiper);
+	}
+}
+
 $(document).ready(function () {
 	handleScrambleText();
 	handleNotification();
 	handleSliderHero();
 	handleSliderUnlimited();
+	handleSliderArticles();
 });
