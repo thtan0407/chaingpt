@@ -97,20 +97,69 @@ const handleSliderUnlimited = function () {
 }
 
 const handleSliderArticles = function () {
-	if ($('#sliderArticles').length > 0) {
-		const elmSwiper = '#sliderArticles';
-		const objSwiper = {
-			loop: false,
-			speed: 500,
-			autoplay: false,
-			slidesPerView: 2,
-			allowTouchMove: false,
-			navigation: {
-				nextEl: elmSwiper + " .sliderArticlesNext",
-				prevEl: elmSwiper + " .sliderArticlesPrev",
-			},
-		}
-		handleSwiper(elmSwiper + ' .swiper', objSwiper);
+	if ($('.sliderArticles').length > 0) {
+		$('.sliderArticles').each(function () {
+			let elmID = $(this).attr('id');
+
+			const elmSwiper = '#' + elmID;
+			const objSwiper = {
+				loop: false,
+				speed: 500,
+				autoplay: false,
+				slidesPerView: 2,
+				allowTouchMove: false,
+				navigation: {
+					nextEl: elmSwiper + " .sliderArticlesNext",
+					prevEl: elmSwiper + " .sliderArticlesPrev",
+				},
+			}
+			handleSwiper(elmSwiper + ' .swiper', objSwiper);
+		});
+	}
+}
+
+
+const handleImportEmbedYoutube = function () {
+	if ($('.handleYoutube').length) {
+		$('.handleYoutube').click(function () {
+			let youtubeFrame = $(this),
+				embedYoutubeID = youtubeFrame.attr('data-embed'),
+				embedFrame = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${embedYoutubeID}?rel=0&showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe>`;
+
+			youtubeFrame.addClass('is-video');
+			youtubeFrame.html(embedFrame)
+			youtubeFrame.find('img').remove();
+		})
+	}
+}
+
+const handleCopyValue = function () {
+	if ($('.handleCopyButton').length) {
+		$('.handleCopyButton').on('click', function () {
+			const buttonCopy = $(this);
+			const valueToCopy = buttonCopy.data('value');
+
+			const textAreaTemp = $('<textarea>')
+				.css({
+					position: 'absolute',
+					left: '-99999px'
+				})
+				.attr('id', 'textareaCopy')
+				.appendTo('body');
+
+			textAreaTemp.val(valueToCopy).select();
+			document.execCommand('copy');
+
+			textAreaTemp.remove();
+
+			buttonCopy.closest('.handleCopy').addClass('copied');
+			buttonCopy.find('img').attr('src', '../assets/images/icon-copied.svg');
+
+			setTimeout(() => {
+				buttonCopy.closest('.handleCopy').removeClass('copied');
+				buttonCopy.find('img').attr('src', '../assets/images/icon-copy.png');
+			}, 1000)
+		});
 	}
 }
 
@@ -120,4 +169,6 @@ $(document).ready(function () {
 	handleSliderHero();
 	handleSliderUnlimited();
 	handleSliderArticles();
+	handleCopyValue();
+	handleImportEmbedYoutube();
 });

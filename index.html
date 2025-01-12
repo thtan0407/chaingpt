@@ -1681,7 +1681,7 @@
 		</div>
 	</div>
 	<div class="articles-main">
-		<div class="articles-slider" id="sliderArticles">
+		<div class="articles-slider sliderArticles" id="sliderArticleMain">
 			<div class="articles-slider_button">
 				<button type="button" class="link-default articles-slider_button__prev sliderArticlesPrev">
 					<img src="./assets/images/arrow-next.svg" loading="lazy" width="65" height="65" alt="">
@@ -1706,7 +1706,7 @@
 										<img src="./assets/images/articles/logo-bnb-square.svg" loading="lazy"
 										     width="133" height="54" alt="" class="card-meta_partner__logo">
 									</div>
-									<div class="card-meta-category">
+									<div class="card-meta_category">
 										ChainGPT AI
 									</div>
 								</div>
@@ -1740,7 +1740,7 @@
 										<img src="./assets/images/articles/logo-bnb-square.svg" loading="lazy"
 										     width="133" height="54" alt="" class="card-meta_partner__logo">
 									</div>
-									<div class="card-meta-category">
+									<div class="card-meta_category">
 										ChainGPT AI
 									</div>
 								</div>
@@ -1774,7 +1774,7 @@
 										<img src="./assets/images/articles/logo-bnb-square.svg" loading="lazy"
 										     width="133" height="54" alt="" class="card-meta_partner__logo">
 									</div>
-									<div class="card-meta-category">
+									<div class="card-meta_category">
 										ChainGPT AI
 									</div>
 								</div>
@@ -1808,7 +1808,7 @@
 										<img src="./assets/images/articles/logo-bnb-square.svg" loading="lazy"
 										     width="133" height="54" alt="" class="card-meta_partner__logo">
 									</div>
-									<div class="card-meta-category">
+									<div class="card-meta_category">
 										ChainGPT AI
 									</div>
 								</div>
@@ -1842,7 +1842,7 @@
 										<img src="./assets/images/articles/logo-bnb-square.svg" loading="lazy"
 										     width="133" height="54" alt="" class="card-meta_partner__logo">
 									</div>
-									<div class="card-meta-category">
+									<div class="card-meta_category">
 										ChainGPT AI
 									</div>
 								</div>
@@ -1876,7 +1876,7 @@
 										<img src="./assets/images/articles/logo-bnb-square.svg" loading="lazy"
 										     width="133" height="54" alt="" class="card-meta_partner__logo">
 									</div>
-									<div class="card-meta-category">
+									<div class="card-meta_category">
 										ChainGPT AI
 									</div>
 								</div>
@@ -2313,17 +2313,19 @@
 					</div>
 					<div class="token-expand_copy">
 						<div class="token-dropdown dropdown">
-							<div class="token-dropdown_title">
+							<div class="token-dropdown_title handleCopy">
 								<img src="./assets/images/token/token-binancedex.svg" width="18" height="21"
 								     class="mw-100 w-aut h-auto token-dropdown_title__thumb" loading="lazy" alt="">
 								<div class="token-dropdown_title__pc">0x...f00f98</div>
 								<div class="token-dropdown_title__mobile">0x...0F62BE6f00f98</div>
-								<button class="link-default token-dropdown_title__button">
+								<button class="link-default token-dropdown_title__button handleCopyButton"
+								        data-value="0x9840652DC04fb9db2C43853633f0F62BE6f00f98">
 									<img src="./assets/images/icon-copy.png" loading="lazy" width="30" height="36"
 									     alt="">
 								</button>
 							</div>
 							<button type="button" class="token-dropdown_button link-default" data-bs-toggle="dropdown"
+							        data-bs-auto-close="outside"
 							        aria-expanded="false">
 								<img src="./assets/images/icon-indicator-white.svg" width="5" height="6" loading="lazy"
 								     alt="">
@@ -2335,7 +2337,7 @@
 									</div>
 								</li>
 								<li class="token-dropdown_item">
-									<div class="token-dropdown_item__block">
+									<div class="token-dropdown_item__block handleCopy">
 										<img src="./assets/images/token/token-binancedex.svg" width="18" height="21"
 										     class="mw-100 w-aut h-auto token-dropdown_title__thumb" loading="lazy"
 										     alt="">
@@ -2344,7 +2346,8 @@
 										</div>
 										<div class="token-dropdown_item__title___pc">0x...f00f98</div>
 										<div class="token-dropdown_item__title___mobile">0x...0F62BE6f00f98</div>
-										<button class="link-default token-dropdown_item__title__button">
+										<button class="link-default token-dropdown_item__title__button handleCopyButton"
+										        data-value="0x9840652DC04fb9db2C43853633f0F62BE6f00f98">
 											<img src="./assets/images/icon-copy.png" loading="lazy" width="30"
 											     height="36"
 											     alt="">
@@ -2352,7 +2355,7 @@
 									</div>
 								</li>
 								<li class="token-dropdown_item">
-									<div class="token-dropdown_item__block">
+									<div class="token-dropdown_item__block handleCopy">
 										<img src="./assets/images/token/token-eth.svg" width="12" height="20"
 										     class="mw-100 w-aut h-auto token-dropdown_title__thumb" loading="lazy"
 										     alt="">
@@ -2361,7 +2364,8 @@
 										</div>
 										<div class="token-dropdown_item__title___pc">0x...f00f98</div>
 										<div class="token-dropdown_item__title___mobile">0x...0F62BE6f00f98</div>
-										<button class="link-default token-dropdown_item__title__button">
+										<button class="link-default token-dropdown_item__title__button handleCopyButton"
+										        data-value="0x25931894a86d47441213199621f1f2994e1c39aa">
 											<img src="./assets/images/icon-copy.png" loading="lazy" width="30"
 											     height="36"
 											     alt="">
@@ -2369,6 +2373,681 @@
 									</div>
 								</li>
 							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="token-popular">
+			<div class="token-popular_left">
+				<div class="token-popular_title">
+					BUY FROM:
+				</div>
+			</div>
+			<div class="token-popular_center">
+				<div class="token-popular_item">
+					<div class="token-popular_item__logo">
+						<img src="./assets/images/partner/logo-kucoin.svg" class="img-fluid w-100" loading="lazy"
+						     height="40" width="114"
+						     alt="">
+					</div>
+					<div class="token-popular_item__badge">
+						<img src="./assets/images/token/badge-popular.svg" class="img-fluid" loading="lazy" height="26"
+						     width="61" alt="">
+					</div>
+					<a href="" class="stretched-link" aria-label=""></a>
+				</div>
+			</div>
+			<div class="token-popular_right">
+				<div class="token-popular_item">
+					<div class="token-popular_item__logo token-popular_item__logo___large">
+						<img src="./assets/images/partner/logo-pancakeswap.svg" class="img-fluid w-100" loading="lazy"
+						     height="40"
+						     width="114"
+						     alt="">
+					</div>
+					<div class="token-popular_item__badge">
+						<img src="./assets/images/token/badge-popular.svg" class="img-fluid" loading="lazy" height="26"
+						     width="61"
+						     alt="">
+					</div>
+					<a href="" class="stretched-link" aria-label=""></a>
+				</div>
+			</div>
+		</div>
+		<div class="token-marquee">
+			<div class="token-marquee_heading">
+				<div class="token-marquee_heading__title">
+					LISTED ON:
+				</div>
+			</div>
+			<div class="token-marquee_frame">
+				<div class="token-marquee_content">
+					<a href="" class="token-marquee_item">
+						<img src="./assets/images/partner/logo-bybit.svg" class="img-fluid" loading="lazy" width="68"
+						     height="40" alt="">
+					</a>
+					<a href="" class="token-marquee_item">
+						<img src="./assets/images/partner/logo-htx.svg" class="img-fluid" loading="lazy" width="132"
+						     height="53" alt="">
+					</a>
+					<a href="" class="token-marquee_item">
+						<img src="./assets/images/partner/logo-gate.svg" class="img-fluid" loading="lazy" width="170"
+						     height="66" alt="">
+					</a>
+					<a href="" class="token-marquee_item">
+						<img src="./assets/images/partner/logo-mexc.svg" class="img-fluid" loading="lazy" width="160"
+						     height="40" alt="">
+					</a>
+					<a href="" class="token-marquee_item">
+						<img src="./assets/images/partner/logo-bitget.svg" class="img-fluid" loading="lazy" width="94"
+						     height="40" alt="">
+					</a>
+					<a href="" class="token-marquee_item">
+						<img src="./assets/images/partner/logo-pancakeswap.svg" class="img-fluid" loading="lazy"
+						     width="160"
+						     height="40" alt="">
+					</a>
+					<a href="" class="token-marquee_item">
+						<img src="./assets/images/partner/logo-uniswap.svg" class="img-fluid" loading="lazy" width="170"
+						     height="49" alt="">
+					</a>
+					<a href="" class="token-marquee_item">
+						<img src="./assets/images/partner/logo-kucoin.svg" class="img-fluid" loading="lazy" width="114"
+						     height="40" alt="">
+					</a>
+				</div>
+				<div class="token-marquee_content">
+					<a href="" class="token-marquee_item">
+						<img src="./assets/images/partner/logo-bybit.svg" class="img-fluid" loading="lazy" width="68"
+						     height="40" alt="">
+					</a>
+					<a href="" class="token-marquee_item">
+						<img src="./assets/images/partner/logo-htx.svg" class="img-fluid" loading="lazy" width="132"
+						     height="53" alt="">
+					</a>
+					<a href="" class="token-marquee_item">
+						<img src="./assets/images/partner/logo-gate.svg" class="img-fluid" loading="lazy" width="170"
+						     height="66" alt="">
+					</a>
+					<a href="" class="token-marquee_item">
+						<img src="./assets/images/partner/logo-mexc.svg" class="img-fluid" loading="lazy" width="160"
+						     height="40" alt="">
+					</a>
+					<a href="" class="token-marquee_item">
+						<img src="./assets/images/partner/logo-bitget.svg" class="img-fluid" loading="lazy" width="94"
+						     height="40" alt="">
+					</a>
+					<a href="" class="token-marquee_item">
+						<img src="./assets/images/partner/logo-pancakeswap.svg" class="img-fluid" loading="lazy"
+						     width="160"
+						     height="40" alt="">
+					</a>
+					<a href="" class="token-marquee_item">
+						<img src="./assets/images/partner/logo-uniswap.svg" class="img-fluid" loading="lazy" width="170"
+						     height="49" alt="">
+					</a>
+					<a href="" class="token-marquee_item">
+						<img src="./assets/images/partner/logo-kucoin.svg" class="img-fluid" loading="lazy" width="114"
+						     height="40" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section-articles">
+	<div class="section-container">
+		<div class="articles-header">
+			<div class="section-heading">
+				<div class="section-heading_title">
+					<div class="section-heading_title__inner">
+						Explore our
+					</div>
+					<div class="section-heading_tabs nav nav-tabs border-0">
+						<button class="nav-link link-default bg-transparent border-0 rounded-0 active"
+						        data-bs-toggle="tab"
+						        data-bs-target="#tab-blog" type="button" role="tab"
+						        aria-selected="true">
+							<span class="section-heading_title__inner section-heading_title__bg">
+								<span></span>
+								blog
+							</span>
+						</button>
+						<button class="nav-link link-default bg-transparent border-0 rounded-0" data-bs-toggle="tab"
+						        data-bs-target="#tab-vlog" type="button" role="tab"
+						        aria-selected="true">
+							<span class="section-heading_title__inner section-heading_title__bg">
+								<span></span>
+								vlog
+							</span>
+						</button>
+						<button class="nav-link link-default bg-transparent border-0 rounded-0" data-bs-toggle="tab"
+						        data-bs-target="#tab-spaces" type="button" role="tab"
+						        aria-selected="true">
+							<span class="section-heading_title__inner section-heading_title__bg">
+								<span></span>
+								spaces
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="articles-header_link">
+				<span class="articles-header_link__text">
+					<img src="./assets/images/caret-right.svg" width="8px" height="8px" loading="lazy" alt="">
+					Read more
+				</span>
+				<a href="" class="articles-header_link__href scramble">
+					<span class="scrambleText">ALL CASE STUDIES</span>
+					<span class="articles-header_link__href___icon">
+						<img src="./assets/images/arrow-color.svg" loading="lazy" width="38" height="38"
+						     alt="Explore Now">
+					</span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="articles-main">
+		<div class="tab-content">
+			<div class="tab-pane fade active show" id="tab-blog">
+				<div class="articles-slider sliderArticles" id="sliderArticlesBlog">
+					<div class="articles-slider_button">
+						<button type="button" class="link-default articles-slider_button__prev sliderArticlesPrev">
+							<img src="./assets/images/arrow-next.svg" loading="lazy" width="65" height="65" alt="">
+						</button>
+						<button type="button" class="link-default articles-slider_button__next sliderArticlesNext">
+							<img src="./assets/images/arrow-next.svg" loading="lazy" width="65" height="65" alt="">
+						</button>
+					</div>
+					<div class="articles-slider_overlay">
+						<div class="articles-slider_overlay__left"></div>
+						<div class="articles-slider_overlay__right"></div>
+					</div>
+					<div class="swiper h-auto">
+						<div class="swiper-wrapper h-auto">
+							<div class="swiper-slide h-auto">
+								<div class="article-card article-card_2 card">
+									<div class="card-body">
+										<div class="card-meta">
+											<div class="card-meta_date">
+												June 25, 2024
+											</div>
+										</div>
+										<div class="card-content">
+											<div class="card-content_image">
+												<img src="./assets/images/articles/article-avatar_2.jpg" loading="lazy"
+												     class="img-fluid w-100" width="541" height="304" alt="">
+												<span class="card-content_image__decor___topleft"></span>
+												<span class="card-content_image__decor___topright"></span>
+												<span class="card-content_image__decor___bottomleft"></span>
+												<span class="card-content_image__decor___bottomright"></span>
+											</div>
+										</div>
+										<div class="card-title">
+											Announcing ChainGPT’s AI Agent – Your New Web3 AI Companion
+										</div>
+										<div class="card-author">
+											<div class="card-author_avatar">
+												<img src="./assets/images/articles/article-author.jpg"
+												     class="w-100 h-100 mw-100" loading="lazy" width="32" height="32"
+												     alt="">
+											</div>
+											<div class="card-author_name">
+												<span>By</span>
+												Chris Duggan
+											</div>
+										</div>
+										<a href="" class="stretched-link" aria-label=""></a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide h-auto">
+								<div class="article-card article-card_2 card">
+									<div class="card-body">
+										<div class="card-meta">
+											<div class="card-meta_date">
+												June 25, 2024
+											</div>
+										</div>
+										<div class="card-content">
+											<div class="card-content_image">
+												<img src="./assets/images/articles/article-avatar_2.jpg" loading="lazy"
+												     class="img-fluid w-100" width="541" height="304" alt="">
+												<span class="card-content_image__decor___topleft"></span>
+												<span class="card-content_image__decor___topright"></span>
+												<span class="card-content_image__decor___bottomleft"></span>
+												<span class="card-content_image__decor___bottomright"></span>
+											</div>
+										</div>
+										<div class="card-title">
+											Announcing ChainGPT’s AI Agent – Your New Web3 AI Companion
+										</div>
+										<div class="card-author">
+											<div class="card-author_avatar">
+												<img src="./assets/images/articles/article-author.jpg"
+												     class="w-100 h-100 mw-100" loading="lazy" width="32" height="32"
+												     alt="">
+											</div>
+											<div class="card-author_name">
+												<span>By</span>
+												Chris Duggan
+											</div>
+										</div>
+										<a href="" class="stretched-link" aria-label=""></a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide h-auto">
+								<div class="article-card article-card_2 card">
+									<div class="card-body">
+										<div class="card-meta">
+											<div class="card-meta_date">
+												June 25, 2024
+											</div>
+										</div>
+										<div class="card-content">
+											<div class="card-content_image">
+												<img src="./assets/images/articles/article-avatar_2.jpg" loading="lazy"
+												     class="img-fluid w-100" width="541" height="304" alt="">
+												<span class="card-content_image__decor___topleft"></span>
+												<span class="card-content_image__decor___topright"></span>
+												<span class="card-content_image__decor___bottomleft"></span>
+												<span class="card-content_image__decor___bottomright"></span>
+											</div>
+										</div>
+										<div class="card-title">
+											Announcing ChainGPT’s AI Agent – Your New Web3 AI Companion
+										</div>
+										<div class="card-author">
+											<div class="card-author_avatar">
+												<img src="./assets/images/articles/article-author.jpg"
+												     class="w-100 h-100 mw-100" loading="lazy" width="32" height="32"
+												     alt="">
+											</div>
+											<div class="card-author_name">
+												<span>By</span>
+												Chris Duggan
+											</div>
+										</div>
+										<a href="" class="stretched-link" aria-label=""></a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide h-auto">
+								<div class="article-card article-card_2 card">
+									<div class="card-body">
+										<div class="card-meta">
+											<div class="card-meta_date">
+												June 25, 2024
+											</div>
+										</div>
+										<div class="card-content">
+											<div class="card-content_image">
+												<img src="./assets/images/articles/article-avatar_2.jpg" loading="lazy"
+												     class="img-fluid w-100" width="541" height="304" alt="">
+												<span class="card-content_image__decor___topleft"></span>
+												<span class="card-content_image__decor___topright"></span>
+												<span class="card-content_image__decor___bottomleft"></span>
+												<span class="card-content_image__decor___bottomright"></span>
+											</div>
+										</div>
+										<div class="card-title">
+											Announcing ChainGPT’s AI Agent – Your New Web3 AI Companion
+										</div>
+										<div class="card-author">
+											<div class="card-author_avatar">
+												<img src="./assets/images/articles/article-author.jpg"
+												     class="w-100 h-100 mw-100" loading="lazy" width="32" height="32"
+												     alt="">
+											</div>
+											<div class="card-author_name">
+												<span>By</span>
+												Chris Duggan
+											</div>
+										</div>
+										<a href="" class="stretched-link" aria-label=""></a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide h-auto">
+								<div class="article-card article-card_2 card">
+									<div class="card-body">
+										<div class="card-meta">
+											<div class="card-meta_date">
+												June 25, 2024
+											</div>
+										</div>
+										<div class="card-content">
+											<div class="card-content_image">
+												<img src="./assets/images/articles/article-avatar_2.jpg" loading="lazy"
+												     class="img-fluid w-100" width="541" height="304" alt="">
+												<span class="card-content_image__decor___topleft"></span>
+												<span class="card-content_image__decor___topright"></span>
+												<span class="card-content_image__decor___bottomleft"></span>
+												<span class="card-content_image__decor___bottomright"></span>
+											</div>
+										</div>
+										<div class="card-title">
+											Announcing ChainGPT’s AI Agent – Your New Web3 AI Companion
+										</div>
+										<div class="card-author">
+											<div class="card-author_avatar">
+												<img src="./assets/images/articles/article-author.jpg"
+												     class="w-100 h-100 mw-100" loading="lazy" width="32" height="32"
+												     alt="">
+											</div>
+											<div class="card-author_name">
+												<span>By</span>
+												Chris Duggan
+											</div>
+										</div>
+										<a href="" class="stretched-link" aria-label=""></a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide h-auto">
+								<div class="article-card article-card_2 card">
+									<div class="card-body">
+										<div class="card-meta">
+											<div class="card-meta_date">
+												June 25, 2024
+											</div>
+										</div>
+										<div class="card-content">
+											<div class="card-content_image">
+												<img src="./assets/images/articles/article-avatar_2.jpg" loading="lazy"
+												     class="img-fluid w-100" width="541" height="304" alt="">
+												<span class="card-content_image__decor___topleft"></span>
+												<span class="card-content_image__decor___topright"></span>
+												<span class="card-content_image__decor___bottomleft"></span>
+												<span class="card-content_image__decor___bottomright"></span>
+											</div>
+										</div>
+										<div class="card-title">
+											Announcing ChainGPT’s AI Agent – Your New Web3 AI Companion
+										</div>
+										<div class="card-author">
+											<div class="card-author_avatar">
+												<img src="./assets/images/articles/article-author.jpg"
+												     class="w-100 h-100 mw-100" loading="lazy" width="32" height="32"
+												     alt="">
+											</div>
+											<div class="card-author_name">
+												<span>By</span>
+												Chris Duggan
+											</div>
+										</div>
+										<a href="" class="stretched-link" aria-label=""></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane fade" id="tab-vlog">
+				<div class="articles-slider sliderArticles" id="sliderArticlesVlog">
+					<div class="articles-slider_button">
+						<button type="button" class="link-default articles-slider_button__prev sliderArticlesPrev">
+							<img src="./assets/images/arrow-next.svg" loading="lazy" width="65" height="65" alt="">
+						</button>
+						<button type="button" class="link-default articles-slider_button__next sliderArticlesNext">
+							<img src="./assets/images/arrow-next.svg" loading="lazy" width="65" height="65" alt="">
+						</button>
+					</div>
+					<div class="articles-slider_overlay">
+						<div class="articles-slider_overlay__left"></div>
+						<div class="articles-slider_overlay__right"></div>
+					</div>
+					<div class="swiper h-auto">
+						<div class="swiper-wrapper h-auto">
+							<div class="swiper-slide h-auto">
+								<div class="article-card article-card_2 article-card_not__hover card">
+									<div class="card-body">
+										<div class="card-meta">
+											<div class="card-meta_date">
+												June 25, 2024
+											</div>
+										</div>
+										<div class="card-content">
+											<div class="card-content_image">
+												<div class="card-content_youtube handleYoutube"
+												     data-embed="h1XFLdlB9ds">
+													<img src="https://img.youtube.com/vi/h1XFLdlB9ds/sddefault.jpg"
+													     loading="lazy"
+													     class="img-fluid w-100" width="541" height="304" alt="">
+												</div>
+												<span class="card-content_image__decor___topleft"></span>
+												<span class="card-content_image__decor___topright"></span>
+												<span class="card-content_image__decor___bottomleft"></span>
+												<span class="card-content_image__decor___bottomright"></span>
+											</div>
+										</div>
+										<div class="card-title">
+											Lower Fees, Higher Liquidity: Discover Cross-Chain Swaps
+										</div>
+										<div class="card-watch">
+											<a href="" class="card-watch_link">
+												Watch on youtube
+												<img src="./assets/images/arrow.svg" loading="lazy" width="12"
+												     height="12" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide h-auto">
+								<div class="article-card article-card_2 article-card_not__hover card">
+									<div class="card-body">
+										<div class="card-meta">
+											<div class="card-meta_date">
+												June 25, 2024
+											</div>
+										</div>
+										<div class="card-content">
+											<div class="card-content_image">
+												<div class="card-content_youtube handleYoutube"
+												     data-embed="h1XFLdlB9ds">
+													<img src="https://img.youtube.com/vi/h1XFLdlB9ds/sddefault.jpg"
+													     loading="lazy"
+													     class="img-fluid w-100" width="541" height="304" alt="">
+												</div>
+												<span class="card-content_image__decor___topleft"></span>
+												<span class="card-content_image__decor___topright"></span>
+												<span class="card-content_image__decor___bottomleft"></span>
+												<span class="card-content_image__decor___bottomright"></span>
+											</div>
+										</div>
+										<div class="card-title">
+											Lower Fees, Higher Liquidity: Discover Cross-Chain Swaps
+										</div>
+										<div class="card-watch">
+											<a href="" class="card-watch_link">
+												Watch on youtube
+												<img src="./assets/images/arrow.svg" loading="lazy" width="12"
+												     height="12" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide h-auto">
+								<div class="article-card article-card_2 article-card_not__hover card">
+									<div class="card-body">
+										<div class="card-meta">
+											<div class="card-meta_date">
+												June 25, 2024
+											</div>
+										</div>
+										<div class="card-content">
+											<div class="card-content_image">
+												<div class="card-content_youtube handleYoutube"
+												     data-embed="h1XFLdlB9ds">
+													<img src="https://img.youtube.com/vi/h1XFLdlB9ds/sddefault.jpg"
+													     loading="lazy"
+													     class="img-fluid w-100" width="541" height="304" alt="">
+												</div>
+												<span class="card-content_image__decor___topleft"></span>
+												<span class="card-content_image__decor___topright"></span>
+												<span class="card-content_image__decor___bottomleft"></span>
+												<span class="card-content_image__decor___bottomright"></span>
+											</div>
+										</div>
+										<div class="card-title">
+											Lower Fees, Higher Liquidity: Discover Cross-Chain Swaps
+										</div>
+										<div class="card-watch">
+											<a href="" class="card-watch_link">
+												Watch on youtube
+												<img src="./assets/images/arrow.svg" loading="lazy" width="12"
+												     height="12" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide h-auto">
+								<div class="article-card article-card_2 article-card_not__hover card">
+									<div class="card-body">
+										<div class="card-meta">
+											<div class="card-meta_date">
+												June 25, 2024
+											</div>
+										</div>
+										<div class="card-content">
+											<div class="card-content_image">
+												<div class="card-content_youtube handleYoutube"
+												     data-embed="h1XFLdlB9ds">
+													<img src="https://img.youtube.com/vi/h1XFLdlB9ds/sddefault.jpg"
+													     loading="lazy"
+													     class="img-fluid w-100" width="541" height="304" alt="">
+												</div>
+												<span class="card-content_image__decor___topleft"></span>
+												<span class="card-content_image__decor___topright"></span>
+												<span class="card-content_image__decor___bottomleft"></span>
+												<span class="card-content_image__decor___bottomright"></span>
+											</div>
+										</div>
+										<div class="card-title">
+											Lower Fees, Higher Liquidity: Discover Cross-Chain Swaps
+										</div>
+										<div class="card-watch">
+											<a href="" class="card-watch_link">
+												Watch on youtube
+												<img src="./assets/images/arrow.svg" loading="lazy" width="12"
+												     height="12" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide h-auto">
+								<div class="article-card article-card_2 article-card_not__hover card">
+									<div class="card-body">
+										<div class="card-meta">
+											<div class="card-meta_date">
+												June 25, 2024
+											</div>
+										</div>
+										<div class="card-content">
+											<div class="card-content_image">
+												<div class="card-content_youtube handleYoutube"
+												     data-embed="h1XFLdlB9ds">
+													<img src="https://img.youtube.com/vi/h1XFLdlB9ds/sddefault.jpg"
+													     loading="lazy"
+													     class="img-fluid w-100" width="541" height="304" alt="">
+												</div>
+												<span class="card-content_image__decor___topleft"></span>
+												<span class="card-content_image__decor___topright"></span>
+												<span class="card-content_image__decor___bottomleft"></span>
+												<span class="card-content_image__decor___bottomright"></span>
+											</div>
+										</div>
+										<div class="card-title">
+											Lower Fees, Higher Liquidity: Discover Cross-Chain Swaps
+										</div>
+										<div class="card-watch">
+											<a href="" class="card-watch_link">
+												Watch on youtube
+												<img src="./assets/images/arrow.svg" loading="lazy" width="12"
+												     height="12" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide h-auto">
+								<div class="article-card article-card_2 article-card_not__hover card">
+									<div class="card-body">
+										<div class="card-meta">
+											<div class="card-meta_date">
+												June 25, 2024
+											</div>
+										</div>
+										<div class="card-content">
+											<div class="card-content_image">
+												<div class="card-content_youtube handleYoutube"
+												     data-embed="h1XFLdlB9ds">
+													<img src="https://img.youtube.com/vi/h1XFLdlB9ds/sddefault.jpg"
+													     loading="lazy"
+													     class="img-fluid w-100" width="541" height="304" alt="">
+												</div>
+												<span class="card-content_image__decor___topleft"></span>
+												<span class="card-content_image__decor___topright"></span>
+												<span class="card-content_image__decor___bottomleft"></span>
+												<span class="card-content_image__decor___bottomright"></span>
+											</div>
+										</div>
+										<div class="card-title">
+											Lower Fees, Higher Liquidity: Discover Cross-Chain Swaps
+										</div>
+										<div class="card-watch">
+											<a href="" class="card-watch_link">
+												Watch on youtube
+												<img src="./assets/images/arrow.svg" loading="lazy" width="12"
+												     height="12" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide h-auto">
+								<div class="article-card article-card_2 article-card_not__hover card">
+									<div class="card-body">
+										<div class="card-meta">
+											<div class="card-meta_date">
+												June 25, 2024
+											</div>
+										</div>
+										<div class="card-content">
+											<div class="card-content_image">
+												<div class="card-content_youtube handleYoutube"
+												     data-embed="h1XFLdlB9ds">
+													<img src="https://img.youtube.com/vi/h1XFLdlB9ds/sddefault.jpg"
+													     loading="lazy"
+													     class="img-fluid w-100" width="541" height="304" alt="">
+												</div>
+												<span class="card-content_image__decor___topleft"></span>
+												<span class="card-content_image__decor___topright"></span>
+												<span class="card-content_image__decor___bottomleft"></span>
+												<span class="card-content_image__decor___bottomright"></span>
+											</div>
+										</div>
+										<div class="card-title">
+											Lower Fees, Higher Liquidity: Discover Cross-Chain Swaps
+										</div>
+										<div class="card-watch">
+											<a href="" class="card-watch_link">
+												Watch on youtube
+												<img src="./assets/images/arrow.svg" loading="lazy" width="12"
+												     height="12" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
