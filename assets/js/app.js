@@ -118,7 +118,6 @@ const handleSliderArticles = function () {
 	}
 }
 
-
 const handleSliderTeams = function () {
 	if ($('.sliderTeams').length > 0) {
 		$('.sliderTeams').each(function () {
@@ -129,7 +128,7 @@ const handleSliderTeams = function () {
 				loop: false,
 				speed: 500,
 				autoplay: false,
-				slidesPerView: 2,
+				slidesPerView: 1,
 				allowTouchMove: false,
 				navigation: {
 					nextEl: elmSwiper + " .sliderTeamsNext",
@@ -138,6 +137,24 @@ const handleSliderTeams = function () {
 			}
 			handleSwiper(elmSwiper + ' .swiper', objSwiper);
 		});
+	}
+}
+
+const handleSliderPartner = function () {
+	if ($('#sliderPartner').length > 0) {
+		const elmSwiper = '#sliderPartner';
+		const objSwiper = {
+			loop: false,
+			speed: 500,
+			autoplay: false,
+			slidesPerView: 1,
+			allowTouchMove: false,
+			navigation: {
+				nextEl: elmSwiper + " .sliderTeamsNext",
+				prevEl: elmSwiper + " .sliderTeamsPrev",
+			},
+		}
+		handleSwiper(elmSwiper + ' .swiper', objSwiper);
 	}
 }
 
@@ -192,6 +209,7 @@ $(document).ready(function () {
 	handleSliderUnlimited();
 	handleSliderTeams();
 	handleSliderArticles();
+	handleSliderPartner();
 	handleCopyValue();
 	handleImportEmbedYoutube();
 });
