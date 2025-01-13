@@ -16,6 +16,7 @@
 	--transition-default: 0.3s all ease-in-out;
 	--size-theme: 1rem;
 	--text-color: #efefe5;
+	--text-color-opacity: #efefe599;
 }
 
 html {
