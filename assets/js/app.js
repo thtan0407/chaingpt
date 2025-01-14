@@ -150,8 +150,26 @@ const handleSliderPartner = function () {
 			slidesPerView: 1,
 			allowTouchMove: false,
 			navigation: {
-				nextEl: elmSwiper + " .sliderTeamsNext",
-				prevEl: elmSwiper + " .sliderTeamsPrev",
+				nextEl: elmSwiper + " .sliderPartnerNext",
+				prevEl: elmSwiper + " .sliderPartnerPrev",
+			},
+		}
+		handleSwiper(elmSwiper + ' .swiper', objSwiper);
+	}
+}
+
+const handleSliderRoadmap = function () {
+	if ($('#sliderRoadmap').length > 0) {
+		const elmSwiper = '#sliderRoadmap';
+		const objSwiper = {
+			loop: false,
+			speed: 500,
+			autoplay: false,
+			slidesPerView: 1,
+			allowTouchMove: false,
+			navigation: {
+				nextEl: elmSwiper + " .sliderRoadmapNext",
+				prevEl: elmSwiper + " .sliderRoadmapPrev",
 			},
 		}
 		handleSwiper(elmSwiper + ' .swiper', objSwiper);
@@ -210,6 +228,7 @@ $(document).ready(function () {
 	handleSliderTeams();
 	handleSliderArticles();
 	handleSliderPartner();
+	handleSliderRoadmap();
 	handleCopyValue();
 	handleImportEmbedYoutube();
 });
