@@ -3718,25 +3718,12 @@
 	top: 0;
 	bottom: 0;
 	left: 0;
-	opacity: .65;
-	background-color: #09090e;
+	background-color: #0a090fe6;
 	inset: 0 auto 0 0;
 }
 
-.section-roadmap .roadmap-slider .roadmap-slider_overlay .roadmap-slider_overlay__center {
-	z-index: 2;
-	opacity: .35;
-	background-color: #09090e;
-	width: calc((100% - 33.6%) / 2);
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: calc(16.8% + ((100% - 33.6%) / 2));
-}
-
 .section-roadmap .roadmap-slider .roadmap-slider_overlay .roadmap-slider_overlay__right {
-	opacity: .65;
-	background-color: #09090e;
+	background-color: #0a090fa6;
 	width: 16.8%;
 	position: absolute;
 	top: 0;
@@ -3853,7 +3840,7 @@
 	display: flex;
 	align-items: center;
 	grid-column-gap: .8125rem;
-	color: #efefe599;
+	color: var(--text-color-opacity);
 	text-transform: uppercase;
 	font-family: var(--font-heading);
 	font-size: .875rem;
@@ -3906,6 +3893,7 @@
 
 .section-questions .section-tabs {
 	margin-top: 94px;
+	position: relative;
 }
 
 .section-questions .section-tabs .section-tab {
@@ -3925,6 +3913,13 @@
 	border-top: 1px solid #353539;
 	margin-bottom: 0;
 	padding: 0 26px;
+	background: #09090e;
+	z-index: 10;
+	position: relative;
+}
+
+.section-questions .question-collapse .question-collapse_item:last-child {
+	border-bottom: 1px solid #353539;
 }
 
 .section-questions .question-collapse .question-collapse_item .question-collapse_head {
@@ -3965,11 +3960,367 @@
 	padding-bottom: 24px;
 }
 
-.section-questions .question-collapse .question-collapse_item .question-collapse_body a{
+.section-questions .question-collapse .question-collapse_item .question-collapse_body a {
 	color: var(--bs-white);
 	text-decoration: underline;
 }
 
 .section-questions .question-collapse .question-collapse_item .question-collapse_body a:hover {
 	text-decoration: none;
+}
+
+.section-revolution {
+	background-image: url('../images/revolution-bg.svg');
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	padding-top: 12vh;
+}
+
+.section-revolution .section-container_small {
+	text-align: center;
+}
+
+.section-revolution .revolution-heading {
+	display: inline-flex;
+	flex-direction: column;
+	margin-bottom: 100px;
+}
+
+.section-revolution .revolution-heading .revolution-heading_sub {
+	grid-column-gap: 26px;
+	margin-bottom: 24px;
+	display: flex;
+	justify-content: flex-start;
+	text-transform: uppercase;
+	font-family: var(--font-heading);
+}
+
+.section-revolution .revolution-heading .revolution-heading_title {
+	display: inline-flex;
+	grid-column-gap: 12px;
+	align-items: center;
+}
+
+.section-revolution .revolution-heading .revolution-heading_title .revolution-heading_title__item {
+	padding: .5rem 1.25rem .375rem;
+	position: relative;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 3.5rem;
+	color: #efefe5;
+	letter-spacing: .09rem;
+	font-weight: 400;
+	line-height: 1.07;
+}
+
+.section-revolution .revolution-heading .revolution-heading_title .revolution-heading_title__item svg {
+	position: absolute;
+	inset: 0;
+}
+
+.section-revolution .revolution-heading .revolution-heading_title .revolution-heading_title__item.revolution-heading_title__item___left svg {
+	width: 5.9rem;
+	height: auto;
+}
+
+.section-revolution .revolution-heading .revolution-heading_title .revolution-heading_title__item.revolution-heading_title__item___right svg {
+	width: 21rem;
+	height: auto;
+}
+
+@media screen and (min-width: 1280px) {
+	.section-revolution .revolution-heading .revolution-heading_title .revolution-heading_title__item {
+		padding-top: .75rem;
+	}
+
+	.section-revolution .revolution-heading .revolution-heading_title .revolution-heading_title__item {
+		font-size: 4.75rem;
+	}
+
+
+	.section-revolution .revolution-heading .revolution-heading_title .revolution-heading_title__item.revolution-heading_title__item___left svg {
+		width: 7.125rem;
+	}
+
+	.section-revolution .revolution-heading .revolution-heading_title .revolution-heading_title__item.revolution-heading_title__item___right svg {
+		width: 25.6875rem;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.section-revolution .revolution-heading .revolution-heading_title .revolution-heading_title__item.revolution-heading_title__item___left svg {
+		width: 4.7rem;
+	}
+
+	.section-revolution .revolution-heading .revolution-heading_title .revolution-heading_title__item.revolution-heading_title__item___right svg {
+		width: 16.7142rem;
+	}
+}
+
+.section-revolution .revolution-marquee {
+	border: 0 #353539;
+	width: 84.5%;
+	display: flex;
+	position: relative;
+}
+
+.section-revolution .revolution-marquee .revolution-marquee_heading {
+	border: 1px solid #353539;
+	border-right-width: 0;
+	width: 18.4%;
+	margin-bottom: auto;
+}
+
+.section-revolution .revolution-marquee .revolution-marquee_heading .revolution-marquee_heading__title {
+	text-transform: uppercase;
+	padding: 43px 12.2%;
+	font-family: var(--font-heading);
+	font-size: .875rem;
+}
+
+.section-revolution .revolution-marquee .revolution-marquee_content {
+	background-color: #09090e;
+	border: 1px solid #353539;
+	border-left-width: 0;
+	flex-direction: column;
+	flex: 1;
+	display: flex;
+	position: relative;
+	overflow: hidden;
+	z-index: 11;
+}
+
+.section-revolution .revolution-marquee .revolution-marquee_content:before {
+	z-index: 3;
+	background-image: linear-gradient(90deg, #09090e, #09090e00);
+	width: 10%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	display: block;
+	content: "";
+	pointer-events: none;
+}
+
+.section-revolution .revolution-marquee .revolution-marquee_content:after {
+	z-index: 3;
+	background-image: linear-gradient(90deg, #09090e00, #09090e);
+	width: 10%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	display: block;
+	content: "";
+	pointer-events: none;
+}
+
+.section-revolution .revolution-marquee_tweet {
+	display: flex;
+}
+
+.section-revolution .revolution-marquee_tweet .revolution-tweet_list {
+	animation: marqueeScroll 44s linear infinite;
+}
+
+.section-revolution .revolution-marquee_tweet .revolution-tweet_item {
+	width: 100%;
+	padding-top: 1.625rem;
+	padding-bottom: 1.625rem;
+	display: flex;
+}
+
+.tweet-card {
+	border-right: 1px solid #353539;
+	flex: none;
+	width: 28.9rem;
+	padding-left: 1.625rem;
+	padding-right: 1.625rem;
+	transition: opacity .2s;
+	position: relative;
+}
+
+.tweet-card:hover {
+	opacity: 0.6;
+}
+
+.tweet-card .tweet-head {
+	align-items: center;
+	margin-bottom: 1.25rem;
+	display: flex;
+}
+
+.tweet-card .tweet-head .tweet-head_image {
+	justify-content: center;
+	align-items: center;
+	margin-right: 1.25rem;
+	padding: 8px;
+	display: flex;
+	position: relative;
+	background-image: url(../images/icon-corner-bottom-right-opacity.svg), url(../images/icon-corner-top-left-opacity.svg);
+	background-position: 100% 100%, 0 0;
+	background-repeat: no-repeat, no-repeat;
+	background-size: 17px 12px, 17px 12px;
+}
+
+.tweet-card .tweet-head .tweet-head_image img {
+	filter: grayscale(1);
+	width: 2.875rem;
+}
+
+.tweet-card .tweet-head .tweet-head_content {
+	padding-right: 1rem;
+}
+
+.tweet-card .tweet-head .tweet-head_content .tweet-head_name {
+	margin-bottom: .1875rem;
+	font-size: 1rem;
+}
+
+.tweet-card .tweet-head .tweet-head_content .tweet-head_account {
+	opacity: .6;
+	font-family: var(--font-heading);
+	font-size: .875rem;
+	line-height: 1;
+}
+
+.tweet-card .tweet-head .tweet-head_logo {
+	width: 1.375rem;
+	margin-top: .375rem;
+	margin-bottom: auto;
+	margin-left: auto;
+}
+
+.tweet-card .tweet-body {
+	color: var(--text-color-opacity);
+}
+
+.tweet-card .tweet-body p {
+	margin-bottom: 1.25rem;
+}
+
+.tweet-card .tweet-body .tweet-fake_link {
+	text-decoration: underline;
+	color: var(--text-color);
+}
+
+.section-revolution .revolution-marquee_logo {
+	display: flex;
+	position: relative;
+}
+
+.section-revolution .revolution-marquee_logo:before {
+	z-index: 4;
+	background-color: #353539;
+	height: 1px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	content: "";
+}
+
+.section-revolution .revolution-marquee_logo .revolution-logo_list {
+	animation: marqueeScroll 30s linear infinite reverse;
+}
+
+.section-revolution .revolution-marquee_logo .revolution-logo_item {
+	width: 100%;
+	display: flex;
+}
+
+.revolution-logo_inner {
+	opacity: .8;
+	flex: none;
+	justify-content: center;
+	align-items: center;
+	width: 170px;
+	margin-left: 24px;
+	margin-right: 24px;
+	padding-top: 28px;
+	padding-bottom: 28px;
+	transition: opacity .2s;
+	display: flex;
+}
+
+.revolution-logo_inner:hover {
+	opacity: 1;
+}
+
+.section-revolution .revolution-socials {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.section-revolution .revolution-socials .revolution-socials_item {
+	grid-row-gap: 14px;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 50%;
+	padding: 98px 24px;
+	display: flex
+}
+
+.section-revolution .revolution-socials .revolution-socials_item .revolution-socials_item__title {
+	color: var(--text-color-opacity);
+	text-transform: uppercase;
+	margin-bottom: 0;
+	font-family: var(--font-heading);
+	font-size: .85rem;
+}
+
+.section-revolution .revolution-socials .revolution-socials_item .revolution-socials_item__link {
+	grid-column-gap: 14px;
+	color: #efefe5;
+	align-items: center;
+	text-decoration: none;
+	transition: opacity .2s;
+	display: flex;
+	font-size: 1.75rem;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+.section-revolution .revolution-socials .revolution-socials_item .revolution-socials_item__link > svg {
+	margin-top: 7px;
+}
+
+.section-revolution .revolution-socials .revolution-socials_item .revolution-socials_item__link:hover {
+	opacity: .6;
+}
+
+.section-revolution .revolution-socials .revolution-socials_item:nth-of-type(2n + 2) {
+	align-items: flex-end;
+}
+
+.section-revolution .revolution-socials .revolution-socials_item:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+	border-top: 1px solid #353539;
+}
+
+.section-revolution .revolution-socials .revolution-socials_logo {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	grid-area: span 1 / span 1 / span 1 / span 1;
+	place-self: auto;
+}
+
+.section-revolution .revolution-socials .revolution-socials_logo .revolution-socials_logo__face {
+	width: 15.5vw;
+	transition: opacity .2s;
+	position: relative;
+	inset: auto;
+}
+
+.section-revolution .revolution-socials .revolution-socials_logo .revolution-socials_logo__eye {
+	width: 37.8%;
+	position: absolute;
 }
