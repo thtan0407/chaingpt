@@ -219,6 +219,70 @@ const handleCopyValue = function () {
 		});
 	}
 }
+const handleEffectEyeMouse = function () {
+	const eye = document.querySelector('#handleEffectEyeMouse');
+
+	// Create a max value for the translation in the x and y directions
+	const maxTrans = 290;
+
+	// Create a max distance for the mouse position to the center of the element (the viewport dimensions wouldn't be a bad choice).
+	let maxXDist, maxYDist;
+
+	let centerX, centerY;
+
+	function resize() {
+		maxXDist = innerWidth / 2;
+		maxYDist = innerHeight / 2;
+
+		const eyeArea = eye.getBoundingClientRect();
+		const R = eyeArea.width / 2;
+		centerX = eyeArea.left + R;
+		centerY = eyeArea.top + R;
+	}
+
+	// Debounce function
+	function debounce(func, wait) {
+		let timeout;
+		return function (...args) {
+			clearTimeout(timeout);
+			timeout = setTimeout(() => func.apply(this, args), wait);
+		};
+	}
+
+	// The update function wrapped with debounce
+	function updateTrans(e) {
+		const eyeArea = eye.getBoundingClientRect();
+		const faceArea = eye.parentElement.getBoundingClientRect();
+
+		// Tính khoảng cách từ chuột đến tâm mắt
+		const x = e.clientX - centerX;
+		const y = e.clientY - centerY;
+
+		// Tính khoảng cách tối đa mắt được phép di chuyển trong khuôn mặt
+		const maxMoveX = (faceArea.width - eyeArea.width) / 2;
+		const maxMoveY = (faceArea.height - eyeArea.height) / 2;
+
+		// Đưa vị trí chuột về tỷ lệ phần trăm và nhân với khoảng di chuyển tối đa
+		let scaledX = (x / maxXDist) * maxTrans;
+		let scaledY = (y / maxYDist) * maxTrans;
+
+		// Giới hạn chuyển động trong khuôn mặt
+		scaledX = Math.min(Math.max(scaledX, -maxMoveX), maxMoveX);
+		scaledY = Math.min(Math.max(scaledY, -maxMoveY), maxMoveY);
+
+		// Áp dụng vị trí mới
+		gsap.to(eye, {x: scaledX, y: scaledY, duration: 0.2, overwrite: 'auto'});
+	}
+
+	// Wrap the updateTrans function with debounce
+	const debouncedUpdateTrans = debounce(updateTrans, 16); // 16ms for 60fps
+
+	window.addEventListener('resize', resize);
+	resize();
+
+	document.querySelector('body').addEventListener('mousemove', debouncedUpdateTrans);
+}
+
 
 $(document).ready(function () {
 	handleScrambleText();
@@ -231,4 +295,5 @@ $(document).ready(function () {
 	handleSliderRoadmap();
 	handleCopyValue();
 	handleImportEmbedYoutube();
+	handleEffectEyeMouse();
 });

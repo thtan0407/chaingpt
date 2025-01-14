@@ -4311,6 +4311,7 @@
 	transform: translate(-50%, -50%);
 	grid-area: span 1 / span 1 / span 1 / span 1;
 	place-self: auto;
+	z-index: 10;
 }
 
 .section-revolution .revolution-socials .revolution-socials_logo .revolution-socials_logo__face {
