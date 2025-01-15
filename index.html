@@ -35,6 +35,64 @@
 <div class="vertical-line vertical-line_center"></div>
 <div class="vertical-line vertical-line_right"></div>
 
+<div class="sidebar-nav short-mode" id="handleSidebar">
+	<div class="sidebar-nav_inner">
+		<div class="sidebar-nav_head">
+			ALL SECTIONS
+			<button type="button" class="link-default" id="handleCloseSidebar">
+				<img src="./assets/images/close.svg" width="10" height="10"
+				     class="img-fluid"
+				     loading="lazy" alt="IDO Closed Icon">
+			</button>
+		</div>
+		<div class="sidebar-nav_list">
+			<div class="sidebar-nav_menu">
+				<button data-target="#sectionHero" class="sidebar-nav_menu__item link-default handleScrollTarget isCurrent">
+					<span class="sidebar-nav_menu__item___text">Intro</span>
+				</button>
+				<button data-target="#sectionUnlimited" class="sidebar-nav_menu__item link-default handleScrollTarget">
+					<span class="sidebar-nav_menu__item___text">Product</span>
+				</button>
+				<button data-target="#sectionAwards" class="sidebar-nav_menu__item link-default handleScrollTarget">
+					<span class="sidebar-nav_menu__item___text">Awards</span>
+				</button>
+				<button data-target="#sectionSolutions" class="sidebar-nav_menu__item link-default handleScrollTarget">
+					<span class="sidebar-nav_menu__item___text">Solutions</span>
+				</button>
+				<button data-target="#sectionArticles" class="sidebar-nav_menu__item link-default handleScrollTarget">
+					<span class="sidebar-nav_menu__item___text">Case Studies</span>
+				</button>
+				<button data-target="#sectionEcosystem" class="sidebar-nav_menu__item link-default handleScrollTarget">
+					<span class="sidebar-nav_menu__item___text">Ecosystem</span>
+				</button>
+				<button data-target="#sectionModel" class="sidebar-nav_menu__item link-default handleScrollTarget">
+					<span class="sidebar-nav_menu__item___text">AI Model</span>
+				</button>
+				<button data-target="#sectionToken" class="sidebar-nav_menu__item link-default handleScrollTarget">
+					<span class="sidebar-nav_menu__item___text">Our Token</span>
+				</button>
+				<button data-target="#sectionTeams" class="sidebar-nav_menu__item link-default handleScrollTarget">
+					<span class="sidebar-nav_menu__item___text">Team</span>
+				</button>
+				<button data-target="#sectionRoadmap" class="sidebar-nav_menu__item link-default handleScrollTarget">
+					<span class="sidebar-nav_menu__item___text">Roadmap</span>
+				</button>
+				<button data-target="#sectionQuestions" class="sidebar-nav_menu__item link-default handleScrollTarget">
+					<span class="sidebar-nav_menu__item___text">F.A.Q</span>
+				</button>
+				<button data-target="#sectionRevolution" class="sidebar-nav_menu__item link-default handleScrollTarget">
+					<span class="sidebar-nav_menu__item___text">Join</span>
+				</button>
+			</div>
+		</div>
+		<button type="button" class="link-default sidebar-nav_button" id="handleOpenSidebar">
+			<img src="./assets/images/icon-menu.svg" loading="lazy" width="24" height="11" class="img-fluid" alt="">
+			Menu
+		</button>
+	</div>
+	<div class="sidebar-nav_overlay"></div>
+</div>
+
 <div class="section-notification" id="notificationBlock">
 	<div class="notification-content d-flex align-items-center justify-content-between gap-15px">
 		<a href="" class="d-inline-flex notification-content_link">
@@ -718,7 +776,7 @@
 	</div>
 </header>
 
-<div class="section-hero">
+<div id="sectionHero" class="section-hero">
 	<div class="section-container">
 		<div class="section-container_small">
 			<div class="hero-info">
@@ -913,7 +971,8 @@
 				</div>
 			</div>
 			<div class="hero-expand_right">
-				<button type="button" class="link-default hero-expand_scroll">
+				<button type="button" data-target="#sectionUnlimited"
+				        class="link-default hero-expand_scroll handleScrollTarget">
 					<span class="hero-expand_scroll__text">
 						SCROLL
 					</span>
@@ -934,7 +993,7 @@
 	</div>
 </div>
 
-<div class="section-unlimited">
+<div id="sectionUnlimited" class="section-unlimited">
 	<div class="unlimited-corner">
 		<div class="unlimited-corner_top">
 			<img src="./assets/images/icon-corner.svg" loading="lazy" width="15" height="15" alt="">
@@ -1069,7 +1128,7 @@
 	</div>
 </div>
 
-<div class="section-awards">
+<div id="sectionAwards" class="section-awards">
 	<div class="section-container">
 		<div class="awards-marquee">
 			<div class="awards-marquee_heading">
@@ -1277,7 +1336,7 @@
 	</div>
 </div>
 
-<div class="section-solutions">
+<div id="sectionSolutions" class="section-solutions">
 	<div class="section-container">
 		<div class="section-heading section-heading_lg">
 			<div class="section-heading_title">
@@ -1651,7 +1710,7 @@
 	</div>
 </div>
 
-<div class="section-articles">
+<div id="sectionArticles" class="section-articles">
 	<div class="section-container">
 		<div class="articles-header">
 			<div class="section-heading">
@@ -1933,7 +1992,7 @@
 	</div>
 </div>
 
-<div class="section-ecosystem">
+<div id="sectionEcosystem" class="section-ecosystem">
 	<div class="section-container">
 		<div class="section-heading">
 			<div class="section-heading_title">
@@ -2017,7 +2076,7 @@
 	</div>
 </div>
 
-<div class="section-model">
+<div id="sectionModel" class="section-model">
 	<div class="section-container">
 		<div class="section-heading">
 			<div class="section-heading_title">
@@ -2249,7 +2308,7 @@
 	</div>
 </div>
 
-<div class="section-token">
+<div id="sectionToken" class="section-token">
 	<div class="section-container">
 		<div class="token-info">
 			<div class="token-info_left">
@@ -2524,7 +2583,7 @@
 	</div>
 </div>
 
-<div class="section-articles">
+<div id="sectionTabs" class="section-articles">
 	<div class="section-container">
 		<div class="articles-header">
 			<div class="section-heading">
@@ -4150,7 +4209,7 @@
 	</div>
 </div>
 
-<div class="section-teams">
+<div id="sectionTeams" class="section-teams">
 	<div class="section-container">
 		<div class="section-heading">
 			<div class="section-heading_title">
@@ -4898,7 +4957,7 @@
 	</div>
 </div>
 
-<div class="section-roadmap">
+<div id="sectionRoadmap" class="section-roadmap">
 	<div class="section-container">
 		<div class="section-heading">
 			<div class="section-heading_title">
@@ -5185,7 +5244,7 @@
 	</div>
 </div>
 
-<div class="section-questions">
+<div id="sectionQuestions" class="section-questions">
 	<div class="section-container">
 		<div class="section-heading">
 			<div class="section-heading_title">
@@ -5738,7 +5797,7 @@
 	</div>
 </div>
 
-<div class="section-revolution">
+<div id="sectionRevolution" class="section-revolution">
 	<div class="section-container">
 		<div class="section-container_small">
 			<div class="revolution-heading">
@@ -6297,10 +6356,8 @@
 					</div>
 					<a href="" class="revolution-socials_item__link">
 						Telegram
-						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M2.71869 1.51632L9.37756 1.58317C11.2354 1.55428 12.3974 1.2358 13.5785 0.523391C14.2138 0.140181 15.0737 0.186111 15.6444 0.757756C16.298 1.41241 16.383 2.46284 15.7039 3.14306C15.0248 3.82327 0.0102084 18.8624 0.0102084 18.8624C-0.00340314 18.876 -0.00340224 18.8981 0.0102077 18.9118L1.08646 19.9898C1.10007 20.0034 1.12213 20.0034 1.13575 19.9898L16.8294 4.27043C18.2107 2.88692 20.4276 4.78085 19.4373 6.40414C18.696 7.61924 18.3559 8.82359 18.3568 10.8318L18.4499 17.277C18.4501 17.2959 18.4654 17.3111 18.4842 17.3114L19.9304 17.3323C19.9502 17.3326 19.9662 17.3165 19.9658 17.2967L20 0.0342172C19.9996 0.0154551 19.9845 0.000344554 19.9658 5.81168e-06L2.69877 5.81167e-06C2.67908 -0.000350137 2.66301 0.0156907 2.66329 0.0354147L2.68419 1.48192C2.68446 1.50086 2.69977 1.51613 2.71869 1.51632Z"
-							      fill="currentColor"></path>
-						</svg>
+						<img src="./assets/images/icon-link.svg" loading="lazy" width="20" height="20" class="img-fluid"
+						     alt="">
 					</a>
 				</div>
 				<div class="revolution-socials_item">
@@ -6309,10 +6366,8 @@
 					</div>
 					<a href="" class="revolution-socials_item__link">
 						Discord
-						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M2.71869 1.51632L9.37756 1.58317C11.2354 1.55428 12.3974 1.2358 13.5785 0.523391C14.2138 0.140181 15.0737 0.186111 15.6444 0.757756C16.298 1.41241 16.383 2.46284 15.7039 3.14306C15.0248 3.82327 0.0102084 18.8624 0.0102084 18.8624C-0.00340314 18.876 -0.00340224 18.8981 0.0102077 18.9118L1.08646 19.9898C1.10007 20.0034 1.12213 20.0034 1.13575 19.9898L16.8294 4.27043C18.2107 2.88692 20.4276 4.78085 19.4373 6.40414C18.696 7.61924 18.3559 8.82359 18.3568 10.8318L18.4499 17.277C18.4501 17.2959 18.4654 17.3111 18.4842 17.3114L19.9304 17.3323C19.9502 17.3326 19.9662 17.3165 19.9658 17.2967L20 0.0342172C19.9996 0.0154551 19.9845 0.000344554 19.9658 5.81168e-06L2.69877 5.81167e-06C2.67908 -0.000350137 2.66301 0.0156907 2.66329 0.0354147L2.68419 1.48192C2.68446 1.50086 2.69977 1.51613 2.71869 1.51632Z"
-							      fill="currentColor"></path>
-						</svg>
+						<img src="./assets/images/icon-link.svg" loading="lazy" width="20" height="20" class="img-fluid"
+						     alt="">
 					</a>
 				</div>
 				<div class="revolution-socials_item">
@@ -6321,10 +6376,8 @@
 					</div>
 					<a href="" class="revolution-socials_item__link">
 						Twitter
-						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M2.71869 1.51632L9.37756 1.58317C11.2354 1.55428 12.3974 1.2358 13.5785 0.523391C14.2138 0.140181 15.0737 0.186111 15.6444 0.757756C16.298 1.41241 16.383 2.46284 15.7039 3.14306C15.0248 3.82327 0.0102084 18.8624 0.0102084 18.8624C-0.00340314 18.876 -0.00340224 18.8981 0.0102077 18.9118L1.08646 19.9898C1.10007 20.0034 1.12213 20.0034 1.13575 19.9898L16.8294 4.27043C18.2107 2.88692 20.4276 4.78085 19.4373 6.40414C18.696 7.61924 18.3559 8.82359 18.3568 10.8318L18.4499 17.277C18.4501 17.2959 18.4654 17.3111 18.4842 17.3114L19.9304 17.3323C19.9502 17.3326 19.9662 17.3165 19.9658 17.2967L20 0.0342172C19.9996 0.0154551 19.9845 0.000344554 19.9658 5.81168e-06L2.69877 5.81167e-06C2.67908 -0.000350137 2.66301 0.0156907 2.66329 0.0354147L2.68419 1.48192C2.68446 1.50086 2.69977 1.51613 2.71869 1.51632Z"
-							      fill="currentColor"></path>
-						</svg>
+						<img src="./assets/images/icon-link.svg" loading="lazy" width="20" height="20" class="img-fluid"
+						     alt="">
 					</a>
 				</div>
 				<div class="revolution-socials_item">
@@ -6333,10 +6386,8 @@
 					</div>
 					<a href="" class="revolution-socials_item__link">
 						Contact
-						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M2.71869 1.51632L9.37756 1.58317C11.2354 1.55428 12.3974 1.2358 13.5785 0.523391C14.2138 0.140181 15.0737 0.186111 15.6444 0.757756C16.298 1.41241 16.383 2.46284 15.7039 3.14306C15.0248 3.82327 0.0102084 18.8624 0.0102084 18.8624C-0.00340314 18.876 -0.00340224 18.8981 0.0102077 18.9118L1.08646 19.9898C1.10007 20.0034 1.12213 20.0034 1.13575 19.9898L16.8294 4.27043C18.2107 2.88692 20.4276 4.78085 19.4373 6.40414C18.696 7.61924 18.3559 8.82359 18.3568 10.8318L18.4499 17.277C18.4501 17.2959 18.4654 17.3111 18.4842 17.3114L19.9304 17.3323C19.9502 17.3326 19.9662 17.3165 19.9658 17.2967L20 0.0342172C19.9996 0.0154551 19.9845 0.000344554 19.9658 5.81168e-06L2.69877 5.81167e-06C2.67908 -0.000350137 2.66301 0.0156907 2.66329 0.0354147L2.68419 1.48192C2.68446 1.50086 2.69977 1.51613 2.71869 1.51632Z"
-							      fill="currentColor"></path>
-						</svg>
+						<img src="./assets/images/icon-link.svg" loading="lazy" width="20" height="20" class="img-fluid"
+						     alt="">
 					</a>
 				</div>
 				<div class="revolution-socials_logo">
@@ -6352,11 +6403,206 @@
 	</div>
 </div>
 
+<footer class="footer">
+	<div class="section-container">
+		<div class="footer-inner">
+			<div class="footer-top">
+				<div class="footer-left">
+					<a href="/" class="footer-logo">
+						<img src="./assets/images/logo-short.svg" loading="lazy" width="34" height="34"
+						     class="img-fluid" alt="">
+					</a>
+				</div>
+				<div class="footer-right">
+					<div class="footer-head">
+						<div class="footer-head_title">
+							Subscribe to be in touch*
+						</div>
+						<div class="footer-head-sub">
+							*Only valuable resources.
+						</div>
+					</div>
+					<div class="footer-form">
+						<form action="" class="footer-form_inner">
+							<input class="footer-form_input" maxlength="256" name="email" placeholder="Your e-mail"
+							       type="email" id="email" required="">
+							<button type="submit" class="link-default footer-form_button">
+								SUBSCRIBE
+							</button>
+						</form>
+						<div class="footer-form_success">
+							Thank you! Your submission has been received!
+						</div>
+						<div class="footer-form_fail">
+							Oops! Something went wrong while submitting the form.
+						</div>
+					</div>
+					<div class="footer-menu">
+						<div class="footer-menu_item">
+							<div class="footer-menu_title">
+								AI Solutions
+							</div>
+							<div class="footer-menu_links">
+								<a href="" class="footer-menu_link">
+									ChainGPT Chat Bot
+								</a>
+								<a href="" class="footer-menu_link">
+									AI NFT Generator
+								</a>
+								<a href="" class="footer-menu_link">
+									ChainGPT on Telegram
+								</a>
+								<a href="" class="footer-menu_link">
+									ChainGPT on Discord
+								</a>
+								<a href="" class="footer-menu_link">
+									Smart Contract Generator
+								</a>
+								<a href="" class="footer-menu_link">
+									Smart Contract Auditor
+								</a>
+								<a href="" class="footer-menu_link">
+									AI Generated News
+								</a>
+								<a href="" class="footer-menu_link">
+									AI Trading Assistant
+								</a>
+								<a href="" class="footer-menu_link">
+									API/SDK Access
+								</a>
+								<a href="" class="footer-menu_link">
+									CryptoGuard
+								</a>
+							</div>
+						</div>
+						<div class="footer-menu_item">
+							<div class="footer-menu_title">
+								Quick Links
+							</div>
+							<div class="footer-menu_links">
+								<a href="" class="footer-menu_link">
+									ChainGPT Pad
+								</a>
+								<a href="" class="footer-menu_link">
+									ChainGPT Blog
+								</a>
+								<a href="" class="footer-menu_link">
+									Documentation
+								</a>
+								<a href="" class="footer-menu_link">
+									$CGPT Staking
+								</a>
+								<a href="" class="footer-menu_link">
+									DAO Governance
+								</a>
+								<a href="" class="footer-menu_link">
+									Pricing Model
+								</a>
+								<a href="" class="footer-menu_link">
+									Contact Us
+								</a>
+								<a href="" class="footer-menu_link">
+									Brand Kit
+								</a>
+							</div>
+						</div>
+						<div class="footer-menu_item">
+							<div class="footer-menu_title">
+								legal
+							</div>
+							<div class="footer-menu_links">
+								<a href="" class="footer-menu_link">
+									Official verification
+								</a>
+								<a href="" class="footer-menu_link">
+									Privacy Policy
+								</a>
+								<a href="" class="footer-menu_link">
+									Terms of Service
+								</a>
+								<a href="" class="footer-menu_link">
+									Cookies Policy
+								</a>
+							</div>
+						</div>
+						<div class="footer-menu_item footer-menu_item__social">
+							<a href="" class="footer-social_item">
+								TELEGRAM
+								<img src="./assets/images/icon-link.svg" loading="lazy" width="20" height="20"
+								     class="img-fluid" alt="">
+							</a>
+							<a href="" class="footer-social_item">
+								DISCORD
+								<img src="./assets/images/icon-link.svg" loading="lazy" width="20" height="20"
+								     class="img-fluid" alt="">
+							</a>
+							<a href="" class="footer-social_item">
+								YOUTUBE
+								<img src="./assets/images/icon-link.svg" loading="lazy" width="20" height="20"
+								     class="img-fluid" alt="">
+							</a>
+							<a href="" class="footer-social_item">
+								MEDIUM
+								<img src="./assets/images/icon-link.svg" loading="lazy" width="20" height="20"
+								     class="img-fluid" alt="">
+							</a>
+							<a href="" class="footer-social_item">
+								LINKEDIN
+								<img src="./assets/images/icon-link.svg" loading="lazy" width="20" height="20"
+								     class="img-fluid" alt="">
+							</a>
+							<a href="" class="footer-social_item">
+								FACEBOOK
+								<img src="./assets/images/icon-link.svg" loading="lazy" width="20" height="20"
+								     class="img-fluid" alt="">
+							</a>
+							<a href="" class="footer-social_item">
+								TWITTER
+								<img src="./assets/images/icon-link.svg" loading="lazy" width="20" height="20"
+								     class="img-fluid" alt="">
+							</a>
+							<a href="" class="footer-social_item">
+								INSTAGRAM
+								<img src="./assets/images/icon-link.svg" loading="lazy" width="20" height="20"
+								     class="img-fluid" alt="">
+							</a>
+							<a href="" class="footer-social_item">
+								GITHUB
+								<img src="./assets/images/icon-link.svg" loading="lazy" width="20" height="20"
+								     class="img-fluid" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-middle">
+				<a href="" class="footer-rank">
+					<img src="./assets/images/footer-rank.svg" loading="lazy" width="250" height="54" class="img-fluid"
+					     alt="">
+				</a>
+			</div>
+			<div class="footer-bottom">
+				<div class="footer-left">
+					© 2025
+				</div>
+				<div class="footer-center">
+					All rights reserved by ChainGPT.org.
+				</div>
+				<div class="footer-right">
+					<img src="./assets/images/icon-double-dot.svg" loading="lazy" width="14" height="4"
+					     class="img-fluid" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
 <script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
-<script type="text/javascript" src="./assets/plugins/lenis/lenis.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/gsap/ScrollTrigger.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/gsap/gsap.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/gsap/ScrambleTextPlugin3.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/gsap/GSDevTools3.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/lenis/lenis.min.js"></script>
 <script type="text/javascript"
         src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>

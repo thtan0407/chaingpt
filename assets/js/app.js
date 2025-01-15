@@ -283,6 +283,45 @@ const handleEffectEyeMouse = function () {
 	document.querySelector('body').addEventListener('mousemove', debouncedUpdateTrans);
 }
 
+const handleScrollLenis = function () {
+	if (!/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+		const e = new Lenis;
+		requestAnimationFrame((function t(o) {
+			e.raf(o), requestAnimationFrame(t)
+		})), e.on("scroll", ScrollTrigger.update), gsap.ticker.lagSmoothing(0)
+	}
+}
+
+const handleSidebarMenu = function () {
+	const body = $('body'),
+		sidebar = $('#handleSidebar'),
+		sidebarOpen = $('#handleOpenSidebar'),
+		sidebarClose = $('#handleCloseSidebar');
+
+
+	sidebarOpen.click(() => {
+		body.addClass('sidebar-is-open');
+
+		setTimeout((function () {
+			sidebar.removeClass("short-mode")
+			sidebar.addClass('full-mode');
+		}), 300)
+	});
+
+	sidebarClose.click(() => {
+		body.removeClass("sidebar-is-open");
+		body.addClass("sidebar-is-closed");
+
+		setTimeout((function () {
+			sidebar.removeClass("full-mode");
+			sidebar.addClass("short-mode")
+		}), 500);
+
+		setTimeout((function () {
+			body.removeClass("sidebar-is-closed")
+		}), 1000)
+	})
+}
 
 $(document).ready(function () {
 	handleScrambleText();
@@ -296,4 +335,6 @@ $(document).ready(function () {
 	handleCopyValue();
 	handleImportEmbedYoutube();
 	handleEffectEyeMouse();
+	handleScrollLenis();
+	handleSidebarMenu();
 });
