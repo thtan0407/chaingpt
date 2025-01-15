@@ -323,6 +323,63 @@ const handleSidebarMenu = function () {
 	})
 }
 
+const handleHandleSmoothScrollTarget = function () {
+	$('.handleScrollTarget').on('click', function (event) {
+		event.preventDefault();
+
+		const elm = $(this);
+		const targetID =elm.attr('data-target');
+		const targetElement = $(targetID);
+
+		if (targetElement.length) {
+			const offsetTop = targetElement.offset().top;
+
+			const currentScroll = $(window).scrollTop();
+			const distance = Math.abs(offsetTop - currentScroll);
+
+			const duration = Math.min(3600, Math.max(800, (distance / 1000) * 600));
+
+			$('html, body').animate({
+				scrollTop: offsetTop
+			}, duration, 'easeInOutQuad', function () {
+				$('.handleScrollTarget').removeClass('isCurrent');
+				elm.addClass('isCurrent');
+			});
+		}
+	});
+
+	if (!$.easing.easeInOutQuad) {
+		$.extend($.easing, {
+			easeInOutQuad: function (x) {
+				return x < 0.5 ? 2 * x * x : -1 + (4 - 2 * x) * x;
+			}
+		});
+	}
+
+	const offsetThreshold = 100;
+
+	$(window).on('scroll', function () {
+		const scrollPosition = $(window).scrollTop();
+
+		$('.handleScrollTarget').each(function () {
+			const elm = $(this);
+			const targetID = elm.attr('data-target');
+			const targetElement = $(targetID);
+
+			if (targetElement.length) {
+				const elementTop = targetElement.offset().top;
+				const elementBottom = elementTop + targetElement.outerHeight();
+
+				if (scrollPosition + offsetThreshold >= elementTop && scrollPosition + offsetThreshold < elementBottom) {
+					$('.handleScrollTarget').removeClass('isCurrent');
+					elm.addClass('isCurrent');
+					return false;
+				}
+			}
+		});
+	});
+}
+
 $(document).ready(function () {
 	handleScrambleText();
 	handleNotification();
@@ -337,4 +394,5 @@ $(document).ready(function () {
 	handleEffectEyeMouse();
 	handleScrollLenis();
 	handleSidebarMenu();
+	handleHandleSmoothScrollTarget();
 });
