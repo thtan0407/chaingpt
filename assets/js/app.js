@@ -230,7 +230,18 @@ const handleSliderUnlimited = function () {
 				disableOnInteraction: true,
 			},
 			slidesPerView: 2.505,
-			allowTouchMove: false,
+			breakpoints: {
+				320: {
+					slidesPerView: 1.05,
+					centered: true
+				},
+				768: {
+					slidesPerView: 2.095,
+				},
+				992: {
+					slidesPerView: 2.505,
+				}
+			}
 		}
 		handleSwiper(elmSwiper + ' .swiper', objSwiper);
 	}
