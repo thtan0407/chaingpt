@@ -1,3 +1,124 @@
+let windowWidth = $('body').width();
+let handleApplyCollapse = function ($parent, $firstItem = false, $callFunction = false) {
+	let $childUl = $parent.find('> li > [data-navigation=sub]');
+	if ($childUl.length === 0) {
+		return;
+	}
+
+	if ($callFunction) {
+		$parent.find('> li a').each(function () {
+			$(this).attr('data-href', $(this).attr('href'))
+		});
+	}
+
+	let $parentID = '';
+
+	if ($firstItem) {
+		$parentID = 'menu-' + Math.random().toString(36).substring(7);
+		$parent.attr('id', $parentID);
+	}
+
+	if (windowWidth <= 991) {
+		const heightCalc = $('#header').height() + $('#sectionNotification').height();
+
+		$('#headerNavigation').css('--height', `calc(100vh  - ${heightCalc}px`);
+
+		let $objParentAttr = {};
+		let $objChildrenAttr = {
+			'data-bs-parent': '#' + $parent.attr('id')
+		}
+
+		if ($firstItem) {
+			$objParentAttr = {
+				'data-bs-parent': '#' + $parentID
+			}
+
+			$objChildrenAttr = {};
+		}
+
+		$childUl.each(function () {
+			let $parentUl = $(this).closest('[data-navigation=sub]');
+			let $parentListItem = $(this).closest('li');
+			let $parentListItemAnchor = $parentListItem.children('button');
+
+			let $parentUlID = 'menu-' + Math.random().toString(36).substring(7);
+
+			if (!$parentUl.hasClass('collapse')) {
+				$parentUl.addClass('collapse').attr({
+					'id': 'collapse-' + $parentUlID, ...$objParentAttr, ...$objChildrenAttr
+				});
+
+				$parentListItemAnchor.attr({
+					'data-bs-toggle': 'collapse',
+					'data-bs-target': '#' + $parentUl.attr('id'),
+					'aria-expanded': 'false',
+				})
+
+				handleApplyCollapse($parentUl, false);
+
+				$parentUl.on('show.bs.collapse', function () {
+					$parentListItem.children('button').attr('aria-expanded', true);
+					$parent.find('.collapse.show').not($parentUl).collapse('hide').each(function () {
+						$(this).siblings('li').children('button').attr('aria-expanded', false);
+					});
+				}).on('hide.bs.collapse', function () {
+					$parentListItem.children('button').attr('aria-expanded', false);
+				});
+			}
+		});
+	} else {
+		$('#headerNavigation').removeAttr('style');
+
+		$childUl.each(function () {
+			let $parentUl = $(this).closest('.collapse');
+
+			$parentUl.removeClass('collapse').removeAttr('data-bs-parent id');
+
+			handleApplyCollapse($parentUl);
+		});
+	}
+}
+
+let handleCallMenu = function () {
+	const $body = $('body');
+	const handleBody = function ($toggle = false) {
+		if ($body.hasClass('navigation-is-open')) {
+			$body.removeClass('navigation-is-open');
+
+			$('#headerNavigation [data-navigation=sub]').collapse('hide');
+		} else {
+			if ($toggle) {
+				$body.addClass('navigation-is-open')
+			}
+		}
+	}
+
+	if (windowWidth <= 991) {
+		const $hamburger = $('#callNavigation');
+		if ($hamburger.length) {
+			$hamburger.off('click').on('click', function () {
+				handleBody(true)
+			});
+		}
+	} else {
+		handleBody();
+	}
+}
+
+const handleHeader = function () {
+	handleApplyCollapse($('#headerNavigation > ul'), true, true);
+	handleCallMenu();
+	$(window).resize(function () {
+		let newWindowWidth = $('body').width();
+		if (newWindowWidth !== windowWidth) {
+			windowWidth = newWindowWidth;
+			handleApplyCollapse($('#headerNavigation > ul'));
+			handleCallMenu();
+		}
+	});
+}
+
+
 const handleScrambleText = function () {
 	if ($(".scramble").length > 0) {
 		gsap.registerPlugin(ScrambleTextPlugin);
@@ -29,9 +150,9 @@ const handleScrambleText = function () {
 }
 
 const handleNotification = function () {
-	if ($('#notificationBlock').length > 0 && $('#notificationClose').length > 0) {
+	if ($('#sectionNotification').length > 0 && $('#notificationClose').length > 0) {
 		$('#notificationClose').click(() => {
-			$('#notificationBlock').remove();
+			$('#sectionNotification').remove();
 		})
 	}
 }
@@ -264,7 +385,7 @@ const handleHandleSmoothScrollTarget = function () {
 		event.preventDefault();
 
 		const elm = $(this);
-		const targetID =elm.attr('data-target');
+		const targetID = elm.attr('data-target');
 		const targetElement = $(targetID);
 
 		if (targetElement.length) {
@@ -315,6 +436,7 @@ const handleHandleSmoothScrollTarget = function () {
 }
 
 $(document).ready(function () {
+	handleHeader();
 	handleScrambleText();
 	handleNotification();
 	handleSliderHero();

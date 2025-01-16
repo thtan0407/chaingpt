@@ -28,6 +28,7 @@
 	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="./assets/css/base.css">
 	<link rel="stylesheet" href="./assets/css/style.css?ver=1">
+	<link rel="stylesheet" href="./assets/css/repsonsive.css?ver=1">
 </head>
 <body>
 
@@ -47,7 +48,8 @@
 		</div>
 		<div class="sidebar-nav_list">
 			<div class="sidebar-nav_menu">
-				<button data-target="#sectionHero" class="sidebar-nav_menu__item link-default handleScrollTarget isCurrent">
+				<button data-target="#sectionHero"
+				        class="sidebar-nav_menu__item link-default handleScrollTarget isCurrent">
 					<span class="sidebar-nav_menu__item___text">Intro</span>
 				</button>
 				<button data-target="#sectionUnlimited" class="sidebar-nav_menu__item link-default handleScrollTarget">
@@ -93,7 +95,7 @@
 	<div class="sidebar-nav_overlay"></div>
 </div>
 
-<div class="section-notification" id="notificationBlock">
+<div class="section-notification" id="sectionNotification">
 	<div class="notification-content d-flex align-items-center justify-content-between gap-15px">
 		<a href="" class="d-inline-flex notification-content_link">
 			<span class="notification-content_text limit">
@@ -106,14 +108,23 @@
 	</div>
 </div>
 
-<header class="header">
+<header class="header" id="header">
 	<div class="header-container">
-		<div class="header-logo d-flex">
+		<div class="header-logo d-flex pe-lg-4">
 			<a href="/" class="d-inline-flex align-middle align-items-center">
-				<img src="./assets/images/logo-primary.png" class="mw-100 w-auto" height="42" alt="">
+				<img src="./assets/images/logo-primary.png" class="img-fluid w-auto d-md-block d-none" height="173"
+				     width="808" alt="">
+				<img src="./assets/images/logo-short.png" class="img-fluid w-auto d-block d-md-none" height="173"
+				     width="136" alt="">
 			</a>
 		</div>
-		<div class="header-navigation">
+		<div class="header-hamburger d-flex d-lg-none">
+			<button type="button" class="link-default header-hamburger_button" id="callNavigation">
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+		<div class="header-navigation" id="headerNavigation">
 			<ul>
 				<li>
 					<button type="button" aria-label="OUR ECOSYSTEM" class="link-default">
@@ -128,104 +139,110 @@
 						     class="d-block d-lg-none"
 						     alt="Our Ecosystem">
 					</button>
-					<div class="navigation-list">
-						<div class="navigation-item navigation-item_active position-relative">
-							<div class="navigation-item_logo">
-								<img src="./assets/images/menu/logo-chaingpt.svg" width="152" height="26" loading="lazy"
-								     alt="Main Website"
-								     class="navigation-item_logo__image">
-								<img src="./assets/images/selected-indicator.svg" loading="lazy" alt="Main Website"
-								     class="navigation-item_logo__arrow">
+					<div data-navigation="sub" class="navigation-list">
+						<div class="navigation-list_inner">
+							<div class="navigation-item navigation-item_active position-relative">
+								<div class="navigation-item_logo">
+									<img src="./assets/images/menu/logo-chaingpt.svg" width="152" height="26"
+									     loading="lazy"
+									     alt="Main Website"
+									     class="navigation-item_logo__image">
+									<img src="./assets/images/selected-indicator.svg" loading="lazy" alt="Main Website"
+									     class="navigation-item_logo__arrow">
+								</div>
+								<div class="navigation-item_title">
+									Main Website
+								</div>
+								<div class="navigation-item_bg"></div>
+								<a href="" class="stretched-link" aria-label="Main Logo"></a>
 							</div>
-							<div class="navigation-item_title">
-								Main Website
+							<div class="navigation-item position-relative">
+								<div class="navigation-item_logo">
+									<img src="./assets/images/menu/logo-aihub.svg" width="103" height="26"
+									     loading="lazy"
+									     alt="Cryptoo Ai Hub"
+									     class="navigation-item_logo__image">
+									<img src="./assets/images/arrow.svg" loading="lazy" alt="Cryptoo Ai Hub"
+									     class="navigation-item_logo__arrow">
+								</div>
+								<div class="navigation-item_title">
+									Cryptoo Ai Hub
+								</div>
+								<div class="navigation-item_bg"></div>
+								<a href="" class="stretched-link" aria-label="Main Logo"></a>
 							</div>
-							<div class="navigation-item_bg"></div>
-							<a href="" class="stretched-link" aria-label="Main Logo"></a>
-						</div>
-						<div class="navigation-item position-relative">
-							<div class="navigation-item_logo">
-								<img src="./assets/images/menu/logo-aihub.svg" width="103" height="26" loading="lazy"
-								     alt="Cryptoo Ai Hub"
-								     class="navigation-item_logo__image">
-								<img src="./assets/images/arrow.svg" loading="lazy" alt="Cryptoo Ai Hub"
-								     class="navigation-item_logo__arrow">
+							<div class="navigation-item position-relative">
+								<div class="navigation-item_logo">
+									<img src="./assets/images/menu/logo-nftgen.svg" width="77" height="26"
+									     loading="lazy"
+									     alt="AI NFT Generator"
+									     class="navigation-item_logo__image">
+									<img src="./assets/images/arrow.svg" loading="lazy" alt="AI NFT Generator"
+									     class="navigation-item_logo__arrow">
+								</div>
+								<div class="navigation-item_title">
+									AI NFT Generator
+								</div>
+								<div class="navigation-item_bg"></div>
+								<a href="" class="stretched-link" aria-label="Main Logo"></a>
 							</div>
-							<div class="navigation-item_title">
-								Cryptoo Ai Hub
+							<div class="navigation-item position-relative">
+								<div class="navigation-item_logo">
+									<img src="./assets/images/menu/logo-pad.svg" width="77" height="26" loading="lazy"
+									     alt="Our Launchpad"
+									     class="navigation-item_logo__image">
+									<img src="./assets/images/arrow.svg" loading="lazy" alt="Our Launchpad"
+									     class="navigation-item_logo__arrow">
+								</div>
+								<div class="navigation-item_title">
+									Our Launchpad
+								</div>
+								<div class="navigation-item_bg"></div>
+								<a href="" class="stretched-link" aria-label="Main Logo"></a>
 							</div>
-							<div class="navigation-item_bg"></div>
-							<a href="" class="stretched-link" aria-label="Main Logo"></a>
-						</div>
-						<div class="navigation-item position-relative">
-							<div class="navigation-item_logo">
-								<img src="./assets/images/menu/logo-nftgen.svg" width="77" height="26" loading="lazy"
-								     alt="AI NFT Generator"
-								     class="navigation-item_logo__image">
-								<img src="./assets/images/arrow.svg" loading="lazy" alt="AI NFT Generator"
-								     class="navigation-item_logo__arrow">
+							<div class="navigation-item position-relative">
+								<div class="navigation-item_logo">
+									<img src="./assets/images/menu/logo-labs.svg" width="103" height="25" loading="lazy"
+									     alt="Incubation Labs"
+									     class="navigation-item_logo__image">
+									<img src="./assets/images/arrow.svg" loading="lazy" alt="Incubation Labs"
+									     class="navigation-item_logo__arrow">
+								</div>
+								<div class="navigation-item_title">
+									Incubation Labs
+								</div>
+								<div class="navigation-item_bg"></div>
+								<a href="" class="stretched-link" aria-label="Main Logo"></a>
 							</div>
-							<div class="navigation-item_title">
-								AI NFT Generator
+							<div class="navigation-item position-relative">
+								<div class="navigation-item_logo">
+									<img src="./assets/images/menu/logo-guard.svg" width="103" height="48"
+									     loading="lazy"
+									     alt="Security extension"
+									     class="navigation-item_logo__image">
+									<img src="./assets/images/arrow.svg" loading="lazy" alt="Security extension"
+									     class="navigation-item_logo__arrow">
+								</div>
+								<div class="navigation-item_title">
+									Security extension
+								</div>
+								<div class="navigation-item_bg"></div>
+								<a href="" class="stretched-link" aria-label="Main Logo"></a>
 							</div>
-							<div class="navigation-item_bg"></div>
-							<a href="" class="stretched-link" aria-label="Main Logo"></a>
-						</div>
-						<div class="navigation-item position-relative">
-							<div class="navigation-item_logo">
-								<img src="./assets/images/menu/logo-pad.svg" width="77" height="26" loading="lazy"
-								     alt="Our Launchpad"
-								     class="navigation-item_logo__image">
-								<img src="./assets/images/arrow.svg" loading="lazy" alt="Our Launchpad"
-								     class="navigation-item_logo__arrow">
+							<div class="navigation-item position-relative">
+								<div class="navigation-item_logo">
+									<img src="./assets/images/menu/logo-tab.svg" width="90" height="32" loading="lazy"
+									     alt="CLICKER GAME"
+									     class="navigation-item_logo__image">
+									<img src="./assets/images/arrow.svg" loading="lazy" alt="CLICKER GAME"
+									     class="navigation-item_logo__arrow">
+								</div>
+								<div class="navigation-item_title">
+									CLICKER GAME
+								</div>
+								<div class="navigation-item_bg"></div>
+								<a href="" class="stretched-link" aria-label="Main Logo"></a>
 							</div>
-							<div class="navigation-item_title">
-								Our Launchpad
-							</div>
-							<div class="navigation-item_bg"></div>
-							<a href="" class="stretched-link" aria-label="Main Logo"></a>
-						</div>
-						<div class="navigation-item position-relative">
-							<div class="navigation-item_logo">
-								<img src="./assets/images/menu/logo-labs.svg" width="103" height="25" loading="lazy"
-								     alt="Incubation Labs"
-								     class="navigation-item_logo__image">
-								<img src="./assets/images/arrow.svg" loading="lazy" alt="Incubation Labs"
-								     class="navigation-item_logo__arrow">
-							</div>
-							<div class="navigation-item_title">
-								Incubation Labs
-							</div>
-							<div class="navigation-item_bg"></div>
-							<a href="" class="stretched-link" aria-label="Main Logo"></a>
-						</div>
-						<div class="navigation-item position-relative">
-							<div class="navigation-item_logo">
-								<img src="./assets/images/menu/logo-guard.svg" width="103" height="48" loading="lazy"
-								     alt="Security extension"
-								     class="navigation-item_logo__image">
-								<img src="./assets/images/arrow.svg" loading="lazy" alt="Security extension"
-								     class="navigation-item_logo__arrow">
-							</div>
-							<div class="navigation-item_title">
-								Security extension
-							</div>
-							<div class="navigation-item_bg"></div>
-							<a href="" class="stretched-link" aria-label="Main Logo"></a>
-						</div>
-						<div class="navigation-item position-relative">
-							<div class="navigation-item_logo">
-								<img src="./assets/images/menu/logo-tab.svg" width="90" height="32" loading="lazy"
-								     alt="CLICKER GAME"
-								     class="navigation-item_logo__image">
-								<img src="./assets/images/arrow.svg" loading="lazy" alt="CLICKER GAME"
-								     class="navigation-item_logo__arrow">
-							</div>
-							<div class="navigation-item_title">
-								CLICKER GAME
-							</div>
-							<div class="navigation-item_bg"></div>
-							<a href="" class="stretched-link" aria-label="Main Logo"></a>
 						</div>
 					</div>
 				</li>
@@ -235,7 +252,7 @@
 						<img src="./assets/images/arrow-down.svg" loading="lazy" width="6" height="4"
 						     alt="Solutions">
 					</button>
-					<div class="navigation-dropdown">
+					<div data-navigation="sub" class="navigation-dropdown">
 						<div class="navigation-dropdown_grid">
 							<div class="navigation-dropdown_column navigation-dropdown_column_large">
 								<div class="navigation-dropdown_heading navigation-dropdown_heading__small">
@@ -431,7 +448,7 @@
 						<img src="./assets/images/arrow-down.svg" loading="lazy" width="6" height="4"
 						     alt="Developers">
 					</button>
-					<ul>
+					<ul data-navigation="sub">
 						<li>
 							<a href="" aria-label="$1m Web3-AI Grant">
 								<img src="./assets/images/menu/icon-grant.svg" class="mw-100" height="20" width="20"
@@ -488,7 +505,7 @@
 						<img src="./assets/images/arrow-down.svg" loading="lazy" width="6" height="4"
 						     alt="Learn">
 					</button>
-					<ul>
+					<ul data-navigation="sub">
 						<li>
 							<a href="" aria-label="Docs">
 								<img src="./assets/images/menu/icon-docs.svg" class="mw-100" height="20" width="20"
@@ -545,7 +562,7 @@
 						<img src="./assets/images/arrow-down.svg" loading="lazy" width="6" height="4"
 						     alt="$CGPT">
 					</button>
-					<div class="navigation-dropdown">
+					<div data-navigation="sub" class="navigation-dropdown">
 						<div class="navigation-dropdown_grid">
 							<div class="navigation-dropdown_column">
 								<div class="navigation-dropdown_heading">
@@ -555,7 +572,7 @@
 									     alt="Buy CGPT">
 									Buy CGPT
 								</div>
-								<div class="navigation-dropdown_grid">
+								<div class="navigation-dropdown_grid navigation-dropdown_grid__2">
 									<div class="navigation-dropdown_column">
 										<div class="navigation-dropdown_heading navigation-dropdown_heading__small">
 											CEX
@@ -663,7 +680,7 @@
 						<img src="./assets/images/arrow-down.svg" loading="lazy" width="6" height="4"
 						     alt="Community">
 					</button>
-					<ul>
+					<ul data-navigation="sub">
 						<li>
 							<a href="" aria-label="Telegram Chat">
 								<img src="./assets/images/menu/icon-telegram.svg" class="mw-100" height="20" width="20"
@@ -756,7 +773,7 @@
 					</ul>
 				</li>
 				<li>
-					<a href="" aria-label="Contact Us" class="link-default scramble">
+					<a href="/" aria-label="Contact Us" class="link-default scramble">
 						<span class="scrambleText">Contact Us</span>
 					</a>
 				</li>
@@ -902,8 +919,10 @@
 					Unleash the power of
 				</div>
 				<div class="hero-heading">
-					<div class="hero-heading_title">
-						Blockchain
+					<div class="hero-heading_title scramble">
+						<span data-scramble-trigger>
+							Blockchain
+						</span>
 						<div class="hero-heading_stroke">
 							<svg width="421" height="96" viewBox="0 0 421 96" fill="none"
 							     xmlns="http://www.w3.org/2000/svg">
@@ -934,8 +953,10 @@
 					<div class="hero-heading_line"></div>
 				</div>
 				<div class="hero-heading hero-heading_bottom">
-					<div class="hero-heading_title">
-						AI
+					<div class="hero-heading_title scramble">
+						<span data-scramble-trigger>
+							AI
+						</span>
 						<div class="hero-heading_stroke">
 							<svg width="115" height="88" viewBox="0 0 115 88" fill="none"
 							     xmlns="http://www.w3.org/2000/svg">
@@ -6409,7 +6430,7 @@
 			<div class="footer-top">
 				<div class="footer-left">
 					<a href="/" class="footer-logo">
-						<img src="./assets/images/logo-short.svg" loading="lazy" width="34" height="34"
+						<img src="./assets/images/logo-short.png" loading="lazy" width="34" height="34"
 						     class="img-fluid" alt="">
 					</a>
 				</div>
