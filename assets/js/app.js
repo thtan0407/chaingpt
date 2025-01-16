@@ -21,7 +21,7 @@ let handleApplyCollapse = function ($parent, $firstItem = false, $callFunction =
 	if (windowWidth <= 991) {
 		const heightCalc = $('#header').height() + $('#sectionNotification').height();
 
-		$('#headerNavigation').css('--height', `calc(100vh  - ${heightCalc}px`);
+		$('#headerNavigation').css('--height', `calc(100vh  - ${heightCalc}px)`);
 
 		let $objParentAttr = {};
 		let $objChildrenAttr = {
@@ -153,9 +153,28 @@ const handleNotification = function () {
 	if ($('#sectionNotification').length > 0 && $('#notificationClose').length > 0) {
 		$('#notificationClose').click(() => {
 			$('#sectionNotification').remove();
-		})
+			setCookie('notifications');
+		});
+
+		if (getCookie('notifications') == 1) {
+			$('#sectionNotification').remove();
+		}
 	}
 }
+
+const setCookie = (key) => {
+	const time = new Date();
+	time.setTime(time.getTime() + (30 * 24 * 60 * 60 * 1000));
+	let expires = "expires=" + time.toUTCString();
+	document.cookie = key + "=" + 1 + ";" + expires + ";path=/";
+}
+
+const getCookie = function (key) {
+	let value = "; " + document.cookie;
+	let parts = value.split("; " + key + "=");
+	if (parts.length === 2) return parts.pop().split(";").shift();
+}
+
 
 const handleSwiper = function (elm, obj = {}) {
 	return new Swiper(elm, {
