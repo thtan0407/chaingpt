@@ -93,7 +93,8 @@
 				Menu
 			</span>
 			<span class="d-flex d-lg-none flex-column align-items-end">
-				<img src="./assets/images/icon-menu_mobile.svg" loading="lazy" width="14" height="96" class="img-fluid" alt="">
+				<img src="./assets/images/icon-menu_mobile.svg" loading="lazy" width="14" height="96" class="img-fluid"
+				     alt="">
 			</span>
 		</button>
 	</div>
@@ -2066,7 +2067,7 @@
 						businesses access the AI models, Pad, API, and DAO.
 					</div>
 				</div>
-				<div class="ecosystem-item">
+				<div class="ecosystem-item ecosystem-item_has__button">
 					<div class="ecosystem-item_content">
 						<div class="ecosystem-item_content__number">03</div>
 						<div class="ecosystem-item_content__title">Staking & Farming</div>
@@ -2082,7 +2083,7 @@
 						ecosystem.
 					</div>
 				</div>
-				<div class="ecosystem-item">
+				<div class="ecosystem-item ecosystem-item_has__button">
 					<div class="ecosystem-item_content">
 						<div class="ecosystem-item_content__number">04</div>
 						<div class="ecosystem-item_content__title">DAO Voting</div>
@@ -2125,39 +2126,41 @@
 		</div>
 		<div class="model-content">
 			<div class="model-content_head">
-				<div class="model-content_grid">
+				<div class="model-content_grid nav nav-tabs border-bottom-0">
 					<div class="model-content_grid__left">
 						<div class="model-content_text">
 							YOU ARE:
 						</div>
 					</div>
 					<div class="model-content_grid__center">
-						<div class="model-content_inner">
-							<div class="modal-content_thumb">
+						<button type="button" class="model-content_inner link-default w-100" data-bs-toggle="tab"
+						        data-bs-target="#individual-tab">
+							<span class="modal-content_thumb">
 								<img src="./assets/images/individual-image.webp" width="390" height="376"
 								     class="img-fluid w-100" loading="lazy" alt="INDIVIDUAL">
-							</div>
-							<div class="modal-content_title">
+							</span>
+							<span class="modal-content_title">
 								INDIVIDUAL
-							</div>
-						</div>
+							</span>
+						</button>
 					</div>
 					<div class="model-content_grid__right">
-						<div class="model-content_inner">
-							<div class="modal-content_thumb">
+						<button type="button" class="model-content_inner link-default w-100" data-bs-toggle="tab"
+						        data-bs-target="#businesses-tab">
+							<span class="modal-content_thumb">
 								<img src="./assets/images/business-image.webp" width="390" height="376"
 								     class="img-fluid w-100" loading="lazy" alt="Businesses">
-							</div>
-							<div class="modal-content_title">
+							</span>
+							<span class="modal-content_title">
 								Businesses
-							</div>
-						</div>
+							</span>
+						</button>
 					</div>
 				</div>
 			</div>
 			<div class="model-content_body">
-				<div class="model-content_grid">
-					<div class="model-content_grid__center">
+				<div class="model-content_grid tab-content">
+					<div class="model-content_grid__center tab-pane fade active show" id="individual-tab">
 						<div class="modal-content_arrow">
 							<img src="./assets/images/arrow-down-long.svg" width="16" height="74" loading="lazy"
 							     alt="Arrow down">
@@ -2253,7 +2256,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="model-content_grid__right">
+					<div class="model-content_grid__right tab-pane fade" id="businesses-tab">
 						<div class="modal-content_arrow">
 							<img src="./assets/images/arrow-down-long.svg" width="16" height="74" loading="lazy"
 							     alt="Arrow down">
@@ -2653,7 +2656,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="articles-main">
+	<div class="articles-main articles-main_tabs">
 		<div class="tab-content">
 			<div class="tab-pane fade active show" id="tab-blog">
 				<div class="articles-slider sliderArticles" id="sliderArticlesBlog">

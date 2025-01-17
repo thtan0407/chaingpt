@@ -230,6 +230,7 @@ const handleSliderUnlimited = function () {
 				disableOnInteraction: true,
 			},
 			slidesPerView: 2.505,
+			allowTouchMove: false,
 			breakpoints: {
 				320: {
 					slidesPerView: 1.05,
@@ -263,6 +264,15 @@ const handleSliderArticles = function () {
 					nextEl: elmSwiper + " .sliderArticlesNext",
 					prevEl: elmSwiper + " .sliderArticlesPrev",
 				},
+				breakpoints: {
+					320: {
+						slidesPerView: 1,
+						centered: true
+					},
+					768: {
+						slidesPerView: 2,
+					},
+				}
 			}
 			handleSwiper(elmSwiper + ' .swiper', objSwiper);
 		});
